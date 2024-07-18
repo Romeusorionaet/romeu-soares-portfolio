@@ -16,10 +16,21 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+
     extend: {
       fontSize: {
         mobile: '14px',
         desktop: '16px',
+      },
+
+      height: {
+        hbp_0: '620px',
+        hbp_1: '735px',
+        hbp_2: '850px',
+      },
+
+      padding: {
+        4: '16px',
       },
 
       colors: {
@@ -55,6 +66,9 @@ module.exports = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        dark: {
+          1: 'black',
         },
       },
 

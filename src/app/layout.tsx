@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Prompt } from 'next/font/google'
 import '../assets/styles/global.css'
+import { Header } from '@/components/header'
 
-const inter = Inter({ subsets: ['latin'] })
+const prompt = Prompt({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Romeu Soares / Web developer',
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} mx-auto max-w-[1680px] antialiased`}>
+      <body className={`${prompt.className} antialiased`}>
+        <Header />
+
         {children}
       </body>
     </html>

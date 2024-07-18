@@ -4,7 +4,7 @@
 
   @layer base {
     :root {
-      --background: 0 0% 10%;
+      --background: 0 0% 15%;
       --foreground: 0 0% 100%;
       --card: 0 0% 100%;
       --card-foreground: 222.2 84% 4.9%;
@@ -40,3 +40,12 @@
       @apply bg-background text-foreground;
     }
   }
+
+  @layer utilities {
+    .section_limiter {
+      @apply max-w-[1680px] mx-auto w-full
+    }
+    p {
+      @apply text-mobile md:text-desktop
+    }
+  } 
