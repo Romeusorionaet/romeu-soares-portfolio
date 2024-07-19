@@ -18,6 +18,11 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        slackey: 'var(--font-slackey)',
+        prompt: 'var(--font-prompt)',
+      },
+
       fontSize: {
         mobile: '14px',
         desktop: '16px',

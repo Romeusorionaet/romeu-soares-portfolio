@@ -37,7 +37,16 @@
       @apply border-border;
     }
     body {
-      @apply bg-background text-foreground;
+      @apply bg-background text-foreground font-prompt;
+    }
+    h1 {
+      @apply font-slackey
+    }
+    p {
+      @apply text-mobile md:text-desktop
+    }
+    a {
+      @apply underline
     }
   }
 
@@ -45,7 +54,10 @@
     .section_limiter {
       @apply max-w-[1680px] mx-auto w-full
     }
-    p {
-      @apply text-mobile md:text-desktop
+    .style_title_1 {
+      @apply max-lg:text-6xl max-md:text-4xl lg:text-7xl
+    }
+    .hover_expand_list {
+      @apply mt-2 border-b border-white/50 hover:pb-2 max-h-0 list-inside list-disc overflow-auto opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100
     }
   } 

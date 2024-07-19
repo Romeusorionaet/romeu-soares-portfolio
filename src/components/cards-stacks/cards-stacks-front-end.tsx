@@ -3,7 +3,7 @@ import typescript from '../../assets/img/stacks/front-end/typeScriptLogo.svg'
 import javascript from '../../assets/img/stacks/front-end/javascriptLogo.png'
 import html from '../../assets/img/stacks/front-end/htmlLogo.png'
 import css from '../../assets/img/stacks/front-end/cssLogo.png'
-import tailwindcss from '../../assets/img/stacks/front-end/tailwindcssLogo.svg'
+import tailwindcss from '../../assets/img/stacks/front-end/tailwindcssLogo.png'
 import nextjs from '../../assets/img/stacks/front-end/nextjs.svg'
 import { CardStack } from './card-stack'
 

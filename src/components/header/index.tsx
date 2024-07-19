@@ -15,6 +15,7 @@ import linkedin from '../../assets/img/header-img/linkedin.png'
 import whatsApp from '../../assets/img/header-img/whatsApp.png'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const socialMediaOptions = {
   GITHUB: 'github',
@@ -58,12 +59,20 @@ export function Header() {
   }
 
   return (
-    <header className="fixed left-0 z-20 flex w-full items-center justify-between px-4 pt-10">
+    <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
       <div className="section_limiter flex justify-between">
         <nav>
           <ul className="flex gap-8">
-            <li>Início</li>
-            <li>Sobre</li>
+            <li>
+              <Link href="/" className="no-underline">
+                Início
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="no-underline">
+                Sobre
+              </Link>
+            </li>
             <li>Projetos</li>
             <li>SetUp</li>
             <li></li>
@@ -99,7 +108,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter(socialMediaOptions.GITHUB)}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="" target="_blank">
+              <a href="" target="_blank" className="no-underline">
                 Github
               </a>
             </li>
@@ -107,7 +116,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter(socialMediaOptions.LINKEDIN)}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="" target="_blank">
+              <a href="" target="_blank" className="no-underline">
                 LinkedIn
               </a>
             </li>
@@ -117,7 +126,7 @@ export function Header() {
               }
               onMouseLeave={handleMouseLeave}
             >
-              <a href="" target="_blank">
+              <a href="" target="_blank" className="no-underline">
                 Instagram
               </a>
             </li>
@@ -125,7 +134,7 @@ export function Header() {
               onMouseEnter={() => handleMouseEnter(socialMediaOptions.WHATSAPP)}
               onMouseLeave={handleMouseLeave}
             >
-              <a href="" target="_blank">
+              <a href="" target="_blank" className="no-underline">
                 WhatsApp
               </a>
             </li>

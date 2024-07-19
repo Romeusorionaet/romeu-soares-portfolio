@@ -1,9 +1,19 @@
 import type { Metadata } from 'next'
-import { Prompt } from 'next/font/google'
+import { Prompt, Slackey } from 'next/font/google'
 import '../assets/styles/global.css'
+import '../assets/styles/scrollbar.css'
 import { Header } from '@/components/header'
 
-const prompt = Prompt({ subsets: ['latin'], weight: '400' })
+const prompt = Prompt({
+  subsets: ['latin'],
+  variable: '--font-prompt',
+  weight: '400',
+})
+const slackey = Slackey({
+  subsets: ['latin'],
+  variable: '--font-slackey',
+  weight: '400',
+})
 
 export const metadata: Metadata = {
   title: 'Romeu Soares / Web developer',
@@ -18,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${prompt.className} antialiased`}>
+      <body className={`${prompt.variable} ${slackey.variable} antialiased`}>
         <Header />
 
         {children}

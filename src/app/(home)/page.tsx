@@ -10,9 +10,7 @@ export default function Home() {
         <BackgroundOne />
 
         <section className="section_limiter h-hbp_0 space-y-4 px-4 lg:h-hbp_2">
-          <h1 className="font-bold max-lg:text-7xl max-md:text-5xl lg:text-8xl">
-            Hello World!
-          </h1>
+          <h1 className="style_title_1">Hello World!</h1>
 
           <div className="space-y-4 md:w-1/2">
             <h2 className="text-lg md:text-xl">
@@ -56,25 +54,30 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-4 mt-10 flex flex-col justify-center">
-            <h2 className="mb-4 text-center text-2xl font-bold">
-              Saber mais sobre:
-            </h2>
+          <div className="mb-4 mt-10 flex flex-col items-center justify-center gap-4">
+            <h2 className="text-2xl font-bold">Saber mais sobre:</h2>
 
             <div className="flex items-center justify-center gap-4 text-foreground">
               <Link
-                className="rounded-md bg-dark-1 p-1 hover:scale-105"
+                className="rounded-md bg-dark-1 p-1 no-underline hover:scale-105"
                 href={'/front-end'}
               >
                 Front-End
               </Link>
               <Link
-                className="rounded-md bg-dark-1 p-1 hover:scale-105"
+                className="rounded-md bg-dark-1 p-1 no-underline hover:scale-105"
                 href={'/back-end'}
               >
                 Back-End
               </Link>
             </div>
+
+            <a
+              href="/romeu-soares-programador-front-end.pdf"
+              download="Curriculo.pdf"
+            >
+              Baixar Currículo
+            </a>
           </div>
         </section>
 
