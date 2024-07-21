@@ -2,11 +2,12 @@ import { BackgroundOne } from '@/components/backgounds/background-one'
 import { CardsStacksBackEnd } from '@/components/cards-stacks/cards-stacks-back-end'
 import { CardsStacksFrontEnd } from '@/components/cards-stacks/cards-stacks-front-end'
 import Link from 'next/link'
+import { SectionVideosOnTopics } from '@/components/section-videos-on-topics'
 
 export default function Home() {
   return (
     <div className="pt-28">
-      <main className="pb-28">
+      <main className="pb-8">
         <BackgroundOne />
 
         <section className="section_limiter h-hbp_0 space-y-4 px-4 lg:h-hbp_2">
@@ -81,15 +82,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section_limiter mt-8 bg-cyan-500 p-4 text-foreground">
-          <h2 className="mb-4 text-2xl font-bold">Temas variados</h2>
-
-          <p className="">
-            Preparei muito mais do que apenas conversar sobre programação!
-          </p>
-
-          <div className="my-4 flex items-center justify-center gap-4"></div>
-        </section>
+        <SectionVideosOnTopics />
       </main>
     </div>
   )

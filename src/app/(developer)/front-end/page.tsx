@@ -1,4 +1,3 @@
-import { MovingBackground } from '@/components/moving-card/moving-background'
 import react from '@/assets/img/stacks/front-end/reactLogo.png'
 import css from '@/assets/img/stacks/front-end/cssLogo.png'
 import tailwindcss from '@/assets/img/stacks/front-end/tailwindcssLogo.png'
@@ -9,12 +8,13 @@ import tvcode from '@/assets/img/others/tvcode.png'
 import tools from '@/assets/img/others/tools.png'
 import html from '@/assets/img/stacks/front-end/htmlLogo.png'
 import Image from 'next/image'
+import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function FrontEnd() {
   return (
     <main className="relative overflow-hidden px-4 py-28">
       {Array.from({ length: 10 }).map((_, index) => (
-        <MovingBackground key={index} />
+        <MovingBackgroundBalls key={index} />
       ))}
 
       <h1 className="style_title_1 online-block mx-auto w-5/6 text-center">

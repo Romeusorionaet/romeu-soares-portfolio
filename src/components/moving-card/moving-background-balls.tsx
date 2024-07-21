@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-export function MovingBackground() {
+export function MovingBackgroundBalls() {
   const [position, setPosition] = useState({ top: 0, left: 0 })
   const [velocity, setVelocity] = useState({
     x: (Math.random() - 0.5) * 2,
