@@ -1,6 +1,12 @@
+import { MovingBackground } from '@/components/moving-card/moving-background'
+
 export default function BackEnd() {
   return (
-    <main className="px-4 py-28">
+    <main className="relative overflow-hidden px-4 py-28">
+      {Array.from({ length: 10 }).map((_, index) => (
+        <MovingBackground key={index} />
+      ))}
+
       <h1 className="style_title_1 online-block mx-auto w-5/6 text-center">
         Meus conhecimentos como programador Back-End
       </h1>

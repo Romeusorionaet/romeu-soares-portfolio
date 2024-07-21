@@ -1,8 +1,26 @@
+import Image from 'next/image'
+import profile from '../../assets/img/avatar/romeu-profile.png'
+import { MovingBackground } from '@/components/moving-card/moving-background'
+
 export default function About() {
   return (
-    <main className="px-4 py-28">
+    <main className="relative overflow-hidden px-4 py-28">
+      {Array.from({ length: 10 }).map((_, index) => (
+        <MovingBackground key={index} />
+      ))}
+
       <section className="section_limiter space-y-8">
-        <h1 className="style_title_1">Minha Jornada</h1>
+        <div className="flex flex-col items-center justify-center lg:flex-row">
+          <h1 className="style_title_1">Minha Jornada</h1>
+          <Image
+            width={36}
+            height={36}
+            sizes="100vw"
+            className="h-60 w-52 object-contain"
+            src={profile}
+            alt=""
+          />
+        </div>
 
         <div className="space-y-4">
           <p>
