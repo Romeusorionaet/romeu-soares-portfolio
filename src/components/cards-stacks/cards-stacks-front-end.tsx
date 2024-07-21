@@ -10,49 +10,49 @@ import { CardStack } from './card-stack'
 export function CardsStacksFrontEnd() {
   const stacks = [
     {
-      id: 1,
+      id: 12345,
       link: 'https://react.dev/',
       description:
         'O React permite criar interfaces de usuário a partir de peças individuais chamadas componentes. Crie seus próprios componentes do React, como Thumbnail, LikeButton e Video...ler mais',
       file: react,
     },
     {
-      id: 2,
+      id: 24565,
       link: 'https://www.typescriptlang.org/',
       description:
         'TypeScript é uma linguagem de programação fortemente tipada que se baseia em JavaScript, oferecendo melhores ferramentas em qualquer escala...ler mais',
       file: typescript,
     },
     {
-      id: 3,
+      id: 34535,
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
       description:
         'JavaScript® é uma linguagem leve, interpretada e baseada em objetos com funções de primeira classe, mais conhecida como a linguagem de script para páginas Web...ler mais',
       file: javascript,
     },
     {
-      id: 4,
+      id: 44324,
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML',
       description:
         'HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web...ler mais',
       file: html,
     },
     {
-      id: 5,
+      id: 76897,
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS',
       description:
         '(Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML...ler mais',
       file: css,
     },
     {
-      id: 6,
+      id: 123235,
       link: 'https://tailwindcss.com/',
       description:
         'Crie rapidamente sites modernos sem sair do seu HTML. Uma estrutura CSS de utilidade inicial repleta de classes como flex, pt-4, text-center e rotate-90 que pode ser composta para...ler mais',
       file: tailwindcss,
     },
     {
-      id: 7,
+      id: 235453,
       link: 'https://nextjs.org/',
       description:
         'O Next.js permite que você crie aplicativos da Web de alta qualidade com o poder dos componentes React...ler mais',

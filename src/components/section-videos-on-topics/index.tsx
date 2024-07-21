@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useRef } from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
 import bg2 from '../../assets/img/backgrounds-img/bg-2.png'
 import { MovingStars } from '../moving-card/moving-stars'
@@ -11,7 +11,9 @@ export function SectionVideosOnTopics() {
   const handleMouseOver = () => {
     videoRefs.current.forEach((video) => {
       if (video) {
-        video.play()
+        video.play().catch((error) => {
+          console.error('Failed to play video:', error)
+        })
       }
     })
   }
@@ -27,22 +29,22 @@ export function SectionVideosOnTopics() {
 
   const videos = [
     {
-      id: 1,
+      id: 1234,
       src: '/video/boy-end-book.mp4',
       title: 'livros',
     },
     {
-      id: 2,
+      id: 2345,
       src: '/video/boy-end-book.mp4',
       title: 'livros',
     },
     {
-      id: 3,
+      id: 3234,
       src: '/video/boy-end-book.mp4',
       title: 'livros',
     },
     {
-      id: 4,
+      id: 4457,
       src: '/video/boy-end-book.mp4',
       title: 'livros',
     },
@@ -72,7 +74,7 @@ export function SectionVideosOnTopics() {
       ))}
 
       <div className="flex w-full flex-wrap justify-center gap-4 py-8">
-        {videos.map((item) => {
+        {videos.map((item, index) => {
           return (
             <div
               key={item.id}
@@ -83,7 +85,7 @@ export function SectionVideosOnTopics() {
               </h3>
               <video
                 ref={(el) => {
-                  videoRefs.current[item.id] = el
+                  videoRefs.current[index] = el
                 }}
                 className="h-full w-full duration-700 group-hover:scale-125"
                 muted
