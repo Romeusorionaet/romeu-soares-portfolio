@@ -36,7 +36,7 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Componentes:</p>
             <ul className="hover_expand_list scrollbar">
               <li>Função e Classe: Explica os dois tipos de componentes.</li>
@@ -55,7 +55,7 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Hooks:</p>
             <ul className="hover_expand_list scrollbar scrollbar">
               <li>
@@ -88,7 +88,10 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Props & State:</p>
             <ul className="hover_expand_list scrollbar">
               <li>Props: Dados passados de pai para filho (imutáveis)</li>
@@ -111,7 +114,7 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Gerenciamento de Estado:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -122,7 +125,7 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">React Router:</p>
             <ul className="hover_expand_list scrollbar">
               <li>Navegação e roteamento em aplicações React</li>
@@ -147,7 +150,7 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Formulários:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -173,7 +176,7 @@ export default function FrontEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Integração com APIs:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -215,7 +218,7 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Estilização:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -256,7 +259,7 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Deploy e Build:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -281,8 +284,8 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
-            <p className="font-bold">Boas Práticas:</p>
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
+            <p className="font-bold">Front-end / Back-end:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
                 Componentes Reutilizáveis: Modularidade e reutilização de
@@ -356,7 +359,7 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">JavaScript e TypeScript:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -417,7 +420,7 @@ export default function FrontEnd() {
             />
           </div>
 
-          <div className="group cursor-pointer">
+          <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">HTML:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -473,7 +476,7 @@ export default function FrontEnd() {
           </div>
         </div>
 
-        <div className="group cursor-pointer">
+        <div tabIndex={0} className="group cursor-pointer focus:p-2">
           <div className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Ferramentas e Ecossistema</h2>
 

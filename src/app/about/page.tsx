@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import profile from '../../assets/img/avatar/romeu-profile.png'
-import { MovingBackground } from '@/components/moving-card/moving-background'
+import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function About() {
   return (
     <main className="relative overflow-hidden px-4 py-28">
       {Array.from({ length: 10 }).map((_, index) => (
-        <MovingBackground key={index} />
+        <MovingBackgroundBalls key={index} />
       ))}
 
       <section className="section_limiter space-y-8">
@@ -34,9 +34,10 @@ export default function About() {
             trajetória com um curso de <strong>Web Design Moderno</strong>, onde
             aprendi os conceitos básicos de <i>HTML, CSS e JavaScript.</i> Em
             seguida, participei do programa Explorer da renomada empresa de
-            educação em tecnologia, <strong>Rocketseat</strong>. Através deste
-            programa, pude definir meus objetivos e traçar minha trajetória de
-            forma estruturada.
+            educação em tecnologia,{' '}
+            <a href="https://www.rocketseat.com.br/">Rocketseat</a>. Através
+            deste programa, pude definir meus objetivos e traçar minha
+            trajetória de forma estruturada.
           </p>
           <p>
             Durante o programa, aprofundei meus conhecimentos nos conceitos
@@ -51,8 +52,9 @@ export default function About() {
             atualizadas, como <i>TypeScript, Next.js e Tailwindcss. </i>
           </p>
           <p>
-            Atualmente estou cursando faculdade de Análise e desenvolvimento de
-            sistemas, avançando ainda mais meus conhecimentos.
+            Atualmente estou cursando faculdade de{' '}
+            <strong>Análise e desenvolvimento de sistemas</strong>, avançando
+            ainda mais meus conhecimentos.
           </p>
           <p>
             Se você procura um <strong>Programador Frontend</strong> apaixonado,

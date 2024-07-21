@@ -1,4 +1,8 @@
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
+import Image from 'next/image'
+import nodejs from '@/assets/img/stacks/back-end/nodejsLogo.svg'
+import tools from '@/assets/img/others/tools.png'
+import production from '@/assets/img/others/production.png'
 
 export default function BackEnd() {
   return (
@@ -13,7 +17,17 @@ export default function BackEnd() {
 
       <section className="section_limiter mt-28 flex flex-col gap-6">
         <div>
-          <h2 className="mb-8 text-xl font-bold">Nodejs</h2>
+          <div className="mb-8 flex items-center gap-2">
+            <h2 className="text-xl font-bold">Nodejs</h2>
+            <Image
+              width={36}
+              height={36}
+              sizes="100vw"
+              src={nodejs}
+              alt="logomarca react"
+              className="h-10 w-10 rounded-full bg-white object-cover p-0.5"
+            />
+          </div>
 
           <div className="group cursor-pointer">
             <p className="font-bold">Testes:</p>
@@ -26,7 +40,10 @@ export default function BackEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Frameworks e Conceitos:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -52,7 +69,10 @@ export default function BackEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Autenticação e Autorização:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -66,7 +86,10 @@ export default function BackEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Docker:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -76,7 +99,10 @@ export default function BackEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Caching:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -85,7 +111,10 @@ export default function BackEnd() {
             </ul>
           </div>
 
-          <div className="group cursor-pointer">
+          <div
+            tabIndex={0}
+            className="scrollbar group cursor-pointer focus:p-2"
+          >
             <p className="font-bold">Banco de Dados e ORM:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
@@ -99,6 +128,92 @@ export default function BackEnd() {
               <li>
                 Prisma: ORM para Node.js que facilita a interação com bancos de
                 dados relacionais.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <div className="mb-8 flex items-center gap-2">
+              <h2 className="text-xl font-bold">Produção</h2>
+
+              <Image
+                width={36}
+                height={36}
+                sizes="100vw"
+                src={production}
+                alt="icone de produção"
+                className="h-10 w-10 rounded-full bg-white object-cover"
+              />
+            </div>
+
+            <div tabIndex={0} className="group cursor-pointer focus:p-2">
+              <p className="font-bold">Deploy e Build:</p>
+              <ul className="hover_expand_list scrollbar">
+                <li>
+                  Entendimento de como fazer build e deploy de aplicações Nodejs
+                </li>
+                <li>
+                  <a
+                    href="https://render.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ferramentas como Render para deploy de aplicação Nodejs
+                  </a>
+                </li>
+                <li>Supabase para hospedagem de banco de dados</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="mb-8 flex items-center gap-2">
+            <h2 className="text-xl font-bold">Ferramentas e Ecossistema</h2>
+
+            <Image
+              width={36}
+              height={36}
+              sizes="100vw"
+              src={tools}
+              alt="logomarca html"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+          </div>
+
+          <div tabIndex={0} className="group cursor-pointer">
+            <p className="font-bold">Frameworks:</p>
+            <ul className="hover_expand_list scrollbar">
+              <li>Fastify</li>
+              <li>Express</li>
+            </ul>
+          </div>
+
+          <div tabIndex={0} className="group cursor-pointer">
+            <p className="font-bold">ORM:</p>
+            <ul className="hover_expand_list scrollbar">
+              <li>Prisma: Usado para interagir com bancos de dados.</li>
+            </ul>
+          </div>
+
+          <div tabIndex={0} className="group cursor-pointer">
+            <p className="font-bold">
+              Sistema de gerenciamento de banco de dados relacional (RDBMS):
+            </p>
+            <ul className="hover_expand_list scrollbar">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          <div tabIndex={0} className="group cursor-pointer">
+            <p className="font-bold">Sistema de controle de versão:</p>
+            <ul className="hover_expand_list scrollbar">
+              <li>
+                Git: Sistema de controle de versão para gerenciamento de
+                código-fonte.
               </li>
             </ul>
           </div>

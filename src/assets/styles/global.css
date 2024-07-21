@@ -58,6 +58,11 @@
       @apply max-lg:text-6xl max-md:text-4xl lg:text-7xl
     }
     .hover_expand_list {
-      @apply mt-2 border-b border-white/50 hover:py-10 max-h-0 list-inside list-disc overflow-auto opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100
+      @apply mt-2 border-b border-white/50 max-h-0 list-inside list-disc overflow-auto opacity-0
+      transition-all duration-500 hover:py-10;
+    }
+    .group:hover .hover_expand_list,
+    .group:focus-within .hover_expand_list {
+      @apply max-h-40 opacity-100;
     }
   } 
