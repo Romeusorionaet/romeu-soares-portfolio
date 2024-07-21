@@ -10,9 +10,9 @@ export function MovingBackgroundBalls() {
   })
 
   const [color, setColor] = useState({
-    r: Math.random() * 255,
-    g: Math.random() * 255,
-    b: Math.random() * 255,
+    r: 0,
+    g: 0,
+    b: 0,
   })
 
   useEffect(() => {
@@ -52,13 +52,17 @@ export function MovingBackgroundBalls() {
   }, [velocity])
 
   useEffect(() => {
+    const RGBColor = {
+      r: Math.random() * 255,
+      g: Math.random() * 255,
+      b: Math.random() * 255,
+    }
+
     const colorInterval = setInterval(() => {
-      setColor({
-        r: Math.random() * 255,
-        g: Math.random() * 255,
-        b: Math.random() * 255,
-      })
+      setColor(RGBColor)
     }, 5000) // 5s for change color
+
+    setColor(RGBColor)
 
     return () => clearInterval(colorInterval)
   }, [])

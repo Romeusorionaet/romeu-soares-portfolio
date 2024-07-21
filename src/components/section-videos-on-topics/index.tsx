@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
+import { Suspense, useRef } from 'react'
 import Image from 'next/image'
 import bg2 from '../../assets/img/backgrounds-img/bg-2.png'
 import { MovingStars } from '../moving-card/moving-stars'

@@ -9,7 +9,7 @@ export function MovingStars() {
     y: (Math.random() - 0.5) * 2,
   })
 
-  const [opacity, setOpacity] = useState(Math.random() > 0.5 ? 1 : 0.5)
+  const [opacity, setOpacity] = useState(0)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -18,6 +18,8 @@ export function MovingStars() {
         left: Math.random() * (window.innerWidth - 200),
       })
     }
+
+    setOpacity(Math.random() > 0.5 ? 1 : 0.5)
   }, [])
 
   useEffect(() => {
