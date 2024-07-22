@@ -68,19 +68,10 @@ export function SectionVideosOnTopics() {
   ]
 
   return (
-    <section className="section_limiter relative mt-8 overflow-hidden rounded-lg p-4 text-foreground">
-      <Image
-        width={36}
-        height={36}
-        sizes="100vw"
-        className="absolute left-0 top-0 -z-10 h-full w-full"
-        src={bg2}
-        alt=""
-      />
-
+    <section className="section_limiter mt-8 overflow-hidden rounded-lg p-4 text-foreground">
       <h2 className="mb-4 text-2xl font-bold">Temas variados</h2>
 
-      <p>Preparei alguns temas que me interessam.</p>
+      <p>Preparei alguns temas, impossível você não se interessar por algum.</p>
 
       <div className="flex w-full flex-wrap justify-center gap-2 py-8 md:gap-4">
         {videos.map((item, index) => {
