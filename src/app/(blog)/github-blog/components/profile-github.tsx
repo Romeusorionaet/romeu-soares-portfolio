@@ -12,7 +12,6 @@ export function ProfileGithub() {
         width={36}
         height={36}
         sizes="100vw"
-        priority
         className="h-16 w-16 rounded-full object-contain md:h-32 md:w-32"
         src={githubData.avatar_url}
         alt="avatar do usuário do github"

@@ -12,7 +12,7 @@ interface GithubDataProps {
   public_repos: number
 }
 
-interface GithubDataIssueProps {
+export interface GithubDataIssueProps {
   number: number
   title: string
   body: string
