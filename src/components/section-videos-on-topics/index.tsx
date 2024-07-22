@@ -1,8 +1,6 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
-import Image from 'next/image'
-import bg2 from '../../assets/img/backgrounds-img/bg-2.png'
 
 export function SectionVideosOnTopics() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
