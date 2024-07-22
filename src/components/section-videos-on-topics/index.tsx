@@ -3,7 +3,6 @@
 import { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import bg2 from '../../assets/img/backgrounds-img/bg-2.png'
-import { MovingStars } from '../moving-card/moving-stars'
 
 export function SectionVideosOnTopics() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
@@ -54,12 +53,17 @@ export function SectionVideosOnTopics() {
     {
       id: 2345,
       src: '/video/example-movie.mp4',
-      title: 'Filmes',
+      title: 'Filmes e Series',
     },
     {
       id: 7992,
       src: '/video/astronomia-astrologia.mp4',
       title: 'Astronomia / Astrologia',
+    },
+    {
+      id: 1480,
+      src: '/video/ufologia.mp4',
+      title: 'Ufologia',
     },
   ]
 
@@ -77,10 +81,6 @@ export function SectionVideosOnTopics() {
       <h2 className="mb-4 text-2xl font-bold">Temas variados</h2>
 
       <p>Preparei alguns temas que me interessam.</p>
-
-      {Array.from({ length: 20 }).map((_, index) => (
-        <MovingStars key={index} />
-      ))}
 
       <div className="flex w-full flex-wrap justify-center gap-2 py-8 md:gap-4">
         {videos.map((item, index) => {
