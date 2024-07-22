@@ -1,5 +1,5 @@
 import { GithubContext } from '@/contexts/github-context'
-import { Building, Github, Users } from 'lucide-react'
+import { Book, Building, User, Users } from 'lucide-react'
 import { useContext } from 'react'
 import Image from 'next/image'
 
@@ -24,7 +24,7 @@ export function ProfileGithub() {
 
         <div className="mt-4 flex flex-col gap-2">
           <div className="flex gap-2">
-            <Github size={20} color="#7B96B2" />
+            <User size={20} color="#7B96B2" />
             <span>{githubData.login}</span>
           </div>
 
@@ -39,7 +39,7 @@ export function ProfileGithub() {
           </div>
 
           <div className="flex gap-2">
-            <p>Icon</p>
+            <Book size={20} color="#7B96B2" />
             <span>{githubData.public_repos} Publicações</span>
           </div>
         </div>
