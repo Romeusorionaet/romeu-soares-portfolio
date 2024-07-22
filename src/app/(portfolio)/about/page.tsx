@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import profile from '../../assets/img/avatar/romeu-profile.png'
+import profile from '@/assets/img/avatar/romeu-profile.png'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function About() {

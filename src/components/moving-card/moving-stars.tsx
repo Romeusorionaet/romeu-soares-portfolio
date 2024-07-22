@@ -2,59 +2,61 @@
 
 import React, { useState, useEffect } from 'react'
 
-export function MovingStars() {
+interface MovingStarsProps {
+  containerRef: React.RefObject<HTMLDivElement>
+}
+
+export const MovingStars: React.FC<MovingStarsProps> = ({ containerRef }) => {
   const [position, setPosition] = useState({ top: 0, left: 0 })
   const [velocity, setVelocity] = useState({
-    x: (Math.random() - 0.5) * 2,
-    y: (Math.random() - 0.5) * 2,
+    x: (Math.random() - 0.5) * 0.5, // Pequena variação para esquerda ou direita
+    y: -2, // Sempre subindo
   })
-
-  const [opacity, setOpacity] = useState(0)
+  const [opacity, setOpacity] = useState(1)
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (containerRef.current) {
+      const containerHeight = containerRef.current.clientHeight
+      const containerWidth = containerRef.current.clientWidth
       setPosition({
-        top: Math.random() * (window.innerHeight - 200),
-        left: Math.random() * (window.innerWidth - 200),
+        top: containerHeight - 2, // Ajuste para que parta do fundo do contêiner
+        left: Math.random() * containerWidth,
       })
     }
-
-    setOpacity(Math.random() > 0.5 ? 1 : 0.5)
-  }, [])
-
-  useEffect(() => {
-    const changeDirectionInterval = setInterval(() => {
-      setVelocity({
-        x: (Math.random() - 0.5) * 2,
-        y: (Math.random() - 0.5) * 2,
-      })
-    }, 8000) // 8s for change the direction
-
-    return () => clearInterval(changeDirectionInterval)
-  }, [])
+  }, [containerRef])
 
   useEffect(() => {
     const moveInterval = setInterval(() => {
       setPosition((prevPosition) => {
+        if (!containerRef.current) return prevPosition
+
+        const containerWidth = containerRef.current.clientWidth
+
         const newTop = prevPosition.top + velocity.y
         const newLeft = prevPosition.left + velocity.x
 
+        // Manter a subida suave com leve variação horizontal
+        setVelocity((prevVelocity) => ({
+          x: prevVelocity.x + (Math.random() - 0.5) * 0.05,
+          y: -2,
+        }))
+
         return {
-          top: Math.max(0, Math.min(newTop, window.innerHeight - 200)),
-          left: Math.max(0, Math.min(newLeft, window.innerWidth - 200)),
+          top: Math.max(0, newTop),
+          left: Math.max(0, Math.min(newLeft, containerWidth - 2)),
         }
       })
-    }, 20) // 20ms for update the position
+    }, 20) // 20ms para atualizar a posição
 
     return () => clearInterval(moveInterval)
-  }, [velocity])
+  }, [velocity, containerRef])
 
   useEffect(() => {
-    const initialDelay = Math.random() * 1000 // Random delay up to 1 second
+    const initialDelay = Math.random() * 1000 // Atraso inicial aleatório até 1 segundo
     const startBlinking = () => {
       setInterval(() => {
         setOpacity((prevOpacity) => (prevOpacity === 1 ? 0.5 : 1))
-      }, 1000) // 1s for change opacity
+      }, 1000) // 1s para mudar a opacidade
     }
 
     const initialTimeout = setTimeout(startBlinking, initialDelay)
