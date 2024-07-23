@@ -12,6 +12,7 @@ import {
 import { ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
+import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
 
 export function HeaderBlog() {
   const pathname = usePathname()
@@ -20,9 +21,11 @@ export function HeaderBlog() {
 
   const isInitialPageBLog = routes.includes(pageName)
 
+  const colorTitle = SelectColorForEachRoute(pageName)
+
   return (
     <header className="fixed left-0 z-20 flex w-full flex-col items-center gap-8 border-b border-white/50 bg-background px-4 py-4">
-      <h1 className="style_title_1 text-emerald-500">
+      <h1 className={`style_title_1 ${colorTitle}`}>
         {isInitialPageBLog && pageName}
       </h1>
 
