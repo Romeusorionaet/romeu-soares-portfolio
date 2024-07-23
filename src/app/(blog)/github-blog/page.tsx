@@ -3,12 +3,12 @@
 import { useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
-import ReactMarkdown from 'react-markdown'
 import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
 import { ProfileGithub } from './components/profile-github'
 import { usePagination } from '@/hook/use-pagination'
 import { ControlButtonsPagination } from '@/components/control-buttons-pagination'
 import Link from 'next/link'
+import { MarkDown } from '@/components/mark-down'
 
 export default function GithubBlog() {
   const { fetchGithubSearchIssues, githubSearchIssue } =
@@ -34,12 +34,14 @@ export default function GithubBlog() {
 
       <section className="flex flex-wrap items-center justify-center gap-4">
         {currentData().map((issue: GithubDataIssueProps) => (
-          <Link
-            href={`/details-issue-github-blog/${issue.number}`}
+          <article
             key={issue.number}
-            className="no-underline"
+            className="flex h-44 w-64 flex-col gap-4 overflow-hidden rounded-md bg-emerald-950 p-2 text-sm duration-500 hover:scale-105 md:w-96 md:text-base"
           >
-            <article className="flex h-44 w-64 flex-col gap-4 overflow-hidden rounded-md bg-emerald-800 p-2 text-sm duration-500 hover:scale-105 md:w-96 md:text-base">
+            <Link
+              href={`/details-issue-github-blog/${issue.number}`}
+              className="no-underline"
+            >
               <header className="flex justify-between max-md:flex-col">
                 <h2 className="font-bold">{issue.title}</h2>
                 <span className="whitespace-nowrap text-xs opacity-80">
@@ -49,12 +51,10 @@ export default function GithubBlog() {
                   })}
                 </span>
               </header>
+            </Link>
 
-              <ReactMarkdown className="line-clamp-4 overflow-hidden">
-                {issue.body}
-              </ReactMarkdown>
-            </article>
-          </Link>
+            <MarkDown content={issue.body} />
+          </article>
         ))}
       </section>
 

@@ -68,4 +68,13 @@
     .markdown h2 {
       @apply font-bold text-xl mt-8 mb-4
     }
+    .markdown p {
+      @apply bg-emerald-950 rounded-md p-4
+    }
+    .markdown ul {
+      @apply bg-zinc-700
+    }
+    .markdown li {
+      @apply flex p-4
+    }
   } 

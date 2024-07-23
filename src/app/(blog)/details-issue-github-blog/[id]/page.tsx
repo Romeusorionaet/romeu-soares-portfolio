@@ -11,9 +11,9 @@ import {
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { MarkDown } from '@/components/mark-down'
 
 export default function DetailsIssueGithubBlog() {
   const [issueCardDetails, setIssueCardDetails] = useState({
@@ -32,6 +32,7 @@ export default function DetailsIssueGithubBlog() {
         .get(`/repos/Romeusorionaet/MyGithubBlog/issues/${params.id}`)
         .then((response) => response.data)
         .then((data) => setIssueCardDetails(data))
+        .catch((err) => console.log(err))
     }
 
     fetchIssueDetails()
@@ -39,7 +40,7 @@ export default function DetailsIssueGithubBlog() {
 
   return (
     <main className="section_limiter px-4 pb-8 pt-28">
-      <nav className="mb-28 flex justify-between">
+      <nav className="mb-28 flex justify-between text-sm md:text-base">
         <Link
           href="/github-blog"
           className="flex items-center gap-2 no-underline"
@@ -87,9 +88,7 @@ export default function DetailsIssueGithubBlog() {
           </div>
         </header>
 
-        <ReactMarkdown className="markdown mt-8">
-          {issueCardDetails.body}
-        </ReactMarkdown>
+        <MarkDown content={issueCardDetails.body.toString()} />
       </article>
     </main>
   )
