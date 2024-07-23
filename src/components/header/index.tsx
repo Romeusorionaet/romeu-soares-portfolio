@@ -62,21 +62,34 @@ export function Header() {
     <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
       <div className="section_limiter flex justify-between">
         <nav>
-          <ul className="flex gap-8">
-            <li>
-              <Link href="/" className="no-underline">
-                Início
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="no-underline">
-                Sobre
-              </Link>
-            </li>
-            <li>Projetos</li>
-            <li>SetUp</li>
-            <li></li>
-          </ul>
+          <DropdownMenu>
+            <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-cyan-50">
+              <DropdownMenuSeparator />
+              <ul>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/" className="no-underline">
+                      Início
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/about" className="no-underline">
+                      Sobre
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>Projetos</DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>SetUp</DropdownMenuItem>
+                </li>
+              </ul>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         <nav>
@@ -92,7 +105,7 @@ export function Header() {
                   alt="icone de mídia social"
                 />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-cyan-100">
+              <DropdownMenuContent className="bg-cyan-50">
                 <DropdownMenuLabel>Conecte-se</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Github</DropdownMenuItem>
