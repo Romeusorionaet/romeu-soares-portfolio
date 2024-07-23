@@ -60,7 +60,7 @@ export default function DetailsIssueGithubBlog() {
       </nav>
 
       <article className="mx-auto w-full max-w-[900px]">
-        <header className="space-y-4">
+        <header className="space-y-8">
           <h2 className="text-xl font-bold">{issueCardDetails.title}</h2>
 
           <div>

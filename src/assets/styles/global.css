@@ -69,12 +69,13 @@
       @apply font-bold text-xl mt-8 mb-4
     }
     .markdown p {
-      @apply bg-emerald-950 rounded-md p-4
+      @apply bg-emerald-950 mb-4 rounded-md p-4
     }
     .markdown ul {
-      @apply bg-zinc-700
+      @apply list-inside list-decimal flex flex-col gap-4 p-4 
+      bg-[url('/backgrounds/blocks-github.png')] bg-center
     }
     .markdown li {
-      @apply flex p-4
+      @apply p-2 bg-white/40 rounded-md text-white/80
     }
   } 

@@ -23,7 +23,7 @@ export default function GithubBlog() {
     <main className="pb-8 pt-28">
       <ProfileGithub />
 
-      <form className="section_limiter my-16 text-center">
+      <form className="section_limiter my-16 px-4 text-center">
         <input
           type="text"
           placeholder="Buscar conteúdo"
@@ -32,18 +32,18 @@ export default function GithubBlog() {
         />
       </form>
 
-      <section className="flex flex-wrap items-center justify-center gap-4">
+      <section className="flex flex-wrap items-center justify-center gap-8">
         {currentData().map((issue: GithubDataIssueProps) => (
           <article
             key={issue.number}
-            className="flex h-44 w-64 flex-col gap-4 overflow-hidden rounded-md bg-emerald-950 p-2 text-sm duration-500 hover:scale-105 md:w-96 md:text-base"
+            className="bg-fill relative flex h-44 w-80 flex-col overflow-hidden rounded-md border-t bg-[url('/backgrounds/github.png')] bg-left bg-no-repeat text-sm duration-500 hover:scale-105 md:w-96 md:text-base"
           >
             <Link
               href={`/details-issue-github-blog/${issue.number}`}
               className="no-underline"
             >
-              <header className="flex justify-between max-md:flex-col">
-                <h2 className="font-bold">{issue.title}</h2>
+              <header className="line-clamp-2 flex h-16 justify-between gap-1 px-2 py-1 max-md:flex-col md:h-12">
+                <h2 className="font-bold underline">{issue.title}</h2>
                 <span className="whitespace-nowrap text-xs opacity-80">
                   Há{' '}
                   {formatDistanceToNow(new Date(issue.updated_at), {
@@ -53,7 +53,11 @@ export default function GithubBlog() {
               </header>
             </Link>
 
-            <MarkDown content={issue.body} />
+            <div className="p-2">
+              <MarkDown content={issue.body} />
+            </div>
+
+            <div className="absolute bottom-0 h-10 w-full bg-gradient-to-t from-background" />
           </article>
         ))}
       </section>
