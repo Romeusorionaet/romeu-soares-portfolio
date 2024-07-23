@@ -32,7 +32,7 @@ export default function Home() {
               href="/github-blog"
               className="text-base uppercase lg:text-xl"
             >
-              Accessar Blog
+              Accessa code Blog
             </Link>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function DetailsIssueGithubBlog() {
   }, [params])
 
   return (
-    <main className="section_limiter px-4 pb-8 pt-28">
+    <main className="section_limiter px-4 pb-8 pt-44">
       <nav className="mb-28 flex justify-between text-sm md:text-base">
         <Link
           href="/github-blog"

@@ -11,19 +11,22 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { routes } from '@/constants/route'
 
 export function HeaderBlog() {
   const pathname = usePathname()
-
   const parts = pathname.split('/')
-
   const pageName = parts[parts.length - 1]
+
+  const isInitialPageBLog = routes.includes(pageName)
 
   return (
     <header className="fixed left-0 z-20 flex w-full flex-col items-center gap-8 border-b border-white/50 bg-background px-4 py-4">
-      <h1 className="style_title_1 text-emerald-500">{pageName}</h1>
+      <h1 className="style_title_1 text-emerald-500">
+        {isInitialPageBLog && pageName}
+      </h1>
 
-      <nav className="section_limiter flex justify-between">
+      <nav className="section_limiter flex gap-8 max-md:justify-center">
         <Link href="/" className="no-underline">
           Portfólio
         </Link>

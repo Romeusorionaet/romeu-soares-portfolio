@@ -50,7 +50,7 @@ export function SectionVideosOnTopics() {
     },
     {
       id: 2345,
-      src: '/video/example-movie.mp4',
+      src: '/video/filmes-series.mp4',
       title: 'Filmes e Series',
     },
     {
