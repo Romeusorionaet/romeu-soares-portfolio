@@ -1,0 +1,96 @@
+'use client'
+
+import { apiGithub } from '@/lib/api-github'
+import {
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  MessageCircleMoreIcon,
+  User,
+} from 'lucide-react'
+import Link from 'next/link'
+import { useParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import { formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
+export default function DetailsIssueGithubBlog() {
+  const [issueCardDetails, setIssueCardDetails] = useState({
+    title: '',
+    body: '',
+    user: { login: '' },
+    updated_at: '',
+    comments: '',
+  })
+
+  const params = useParams()
+
+  useEffect(() => {
+    async function fetchIssueDetails() {
+      await apiGithub
+        .get(`/repos/Romeusorionaet/MyGithubBlog/issues/${params.id}`)
+        .then((response) => response.data)
+        .then((data) => setIssueCardDetails(data))
+    }
+
+    fetchIssueDetails()
+  }, [params])
+
+  return (
+    <main className="section_limiter px-4 pb-8 pt-28">
+      <nav className="mb-28 flex justify-between">
+        <Link
+          href="/github-blog"
+          className="flex items-center gap-2 no-underline"
+        >
+          <ArrowLeft size={20} />
+          <span className="uppercase">voltar</span>
+        </Link>
+
+        <a
+          href="https://github.com/Romeusorionaet/MyGithubBlog"
+          target="blank"
+          className="flex items-center gap-2 no-underline"
+        >
+          <span className="uppercase">ver no github</span>
+          <ArrowRight size={20} />
+        </a>
+      </nav>
+
+      <article className="mx-auto w-full max-w-[900px]">
+        <header className="space-y-4">
+          <h2 className="text-xl font-bold">{issueCardDetails.title}</h2>
+
+          <div>
+            <div className="flex gap-2">
+              <User size={20} color="#7B96B2" />
+              <span>{issueCardDetails.user.login}</span>
+            </div>
+
+            <div className="flex gap-2">
+              <Calendar size={20} color="#7B96B2" />
+
+              <span>
+                Há{' '}
+                {issueCardDetails.updated_at &&
+                  formatDistanceToNow(new Date(issueCardDetails.updated_at), {
+                    locale: ptBR,
+                  })}
+              </span>
+            </div>
+
+            <div className="flex gap-2">
+              <MessageCircleMoreIcon size={20} color="#7B96B2" />
+              <span>{issueCardDetails.comments} comentários</span>
+            </div>
+          </div>
+        </header>
+
+        <ReactMarkdown className="markdown mt-8">
+          {issueCardDetails.body}
+        </ReactMarkdown>
+      </article>
+    </main>
+  )
+}

@@ -35,7 +35,7 @@ export default function GithubBlog() {
       <section className="flex flex-wrap items-center justify-center gap-4">
         {currentData().map((issue: GithubDataIssueProps) => (
           <Link
-            href={`/details/${issue.number}`}
+            href={`/details-issue-github-blog/${issue.number}`}
             key={issue.number}
             className="no-underline"
           >

@@ -54,9 +54,9 @@ export function GithubContextProvider({
       .then((data) => setGithubData(data))
   }
 
-  async function fetchGithubSearchIssues(seacrh: string) {
+  async function fetchGithubSearchIssues(search: string) {
     await apiGithub
-      .get(`/search/issues?q=${seacrh}%20repo:Romeusorionaet/MyGithubBlog`)
+      .get(`/search/issues?q=${search}%20repo:Romeusorionaet/MyGithubBlog`)
       .then((response) => response.data)
       .then((data) => setGithubSearchIssue(data.items))
   }

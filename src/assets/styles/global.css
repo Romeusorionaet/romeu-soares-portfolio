@@ -65,4 +65,7 @@
     .group:focus-within .hover_expand_list {
       @apply max-h-40 opacity-100;
     }
+    .markdown h2 {
+      @apply font-bold text-xl mt-8 mb-4
+    }
   } 
