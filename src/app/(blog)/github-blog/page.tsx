@@ -20,7 +20,7 @@ export default function GithubBlog() {
   )
 
   return (
-    <main className="pb-8 pt-28">
+    <main className="pb-8 pt-44">
       <ProfileGithub />
 
       <form className="section_limiter my-16 px-4 text-center">
