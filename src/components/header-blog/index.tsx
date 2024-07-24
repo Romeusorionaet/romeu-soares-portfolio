@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { ChevronDown } from 'lucide-react'
+import { BookOpenText, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
 import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
@@ -20,14 +20,12 @@ export function HeaderBlog() {
   const pageName = parts[parts.length - 1]
 
   const isInitialPageBLog = routes.includes(pageName)
-
   const colorTitle = SelectColorForEachRoute(pageName)
+  const title = isInitialPageBLog ? pageName : <BookOpenText size={40} />
 
   return (
     <header className="fixed left-0 z-20 flex w-full flex-col items-center gap-8 border-b border-white/50 bg-background px-4 py-4">
-      <h1 className={`style_title_1 ${colorTitle}`}>
-        {isInitialPageBLog && pageName}
-      </h1>
+      <h1 className={`style_title_1 ${colorTitle}`}>{title}</h1>
 
       <nav className="section_limiter flex gap-8 max-md:justify-center">
         <Link href="/" className="no-underline">

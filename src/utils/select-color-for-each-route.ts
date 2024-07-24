@@ -7,5 +7,5 @@ export function SelectColorForEachRoute(route: string): string {
     return predefinedRouteColors[route]
   }
 
-  return '#FFFF'
+  return 'text-white/80'
 }
