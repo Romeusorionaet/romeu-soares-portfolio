@@ -29,7 +29,7 @@ export default function Home() {
           <div className="group relative flex items-center justify-end gap-1">
             <Code2Icon className="duration-300 group-focus-within:h-6 group-focus-within:w-6 group-hover:h-6 group-hover:w-6 md:h-0 md:w-0" />
             <Link href="/technology" className="text-base uppercase lg:text-xl">
-              Accessa code Blog
+              Tecnologia (Blog)
             </Link>
           </div>
         </div>
