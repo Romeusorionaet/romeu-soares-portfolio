@@ -1,6 +1,7 @@
 'use client'
 
 import { apiGithub } from '@/lib/api-github'
+import { useQuery } from '@tanstack/react-query'
 import { ReactNode, createContext, useEffect, useState } from 'react'
 
 interface GithubDataProps {
@@ -20,7 +21,9 @@ export interface GithubDataIssueProps {
 }
 
 interface GithubContextType {
-  githubData: GithubDataProps
+  errGithubDataProfile: Error | null
+  isLoadingProfile: boolean
+  githubDataProfile: GithubDataProps
   githubSearchIssue: GithubDataIssueProps[]
   fetchGithubSearchIssues: (search: string) => void
 }
@@ -34,25 +37,19 @@ export const GithubContext = createContext({} as GithubContextType)
 export function GithubContextProvider({
   children,
 }: GithubContextProviderProps) {
-  const [githubData, setGithubData] = useState({
-    avatar_url: '',
-    name: '',
-    bio: '',
-    login: '',
-    followers: 0,
-    public_repos: 0,
+  const {
+    data: githubDataProfile,
+    isLoading: isLoadingProfile,
+    error: errGithubDataProfile,
+  } = useQuery({
+    queryKey: ['profile-github'],
+    queryFn: () =>
+      apiGithub.get(`/users/Romeusorionaet`).then((response) => response.data),
   })
 
   const [githubSearchIssue, setGithubSearchIssue] = useState<
     GithubDataIssueProps[]
   >([])
-
-  async function fetchGithubProfile() {
-    await apiGithub
-      .get(`/users/Romeusorionaet`)
-      .then((response) => response.data)
-      .then((data) => setGithubData(data))
-  }
 
   async function fetchGithubSearchIssues(search: string) {
     await apiGithub
@@ -65,14 +62,12 @@ export function GithubContextProvider({
     fetchGithubSearchIssues('')
   }, [])
 
-  useEffect(() => {
-    fetchGithubProfile()
-  }, [])
-
   return (
     <GithubContext.Provider
       value={{
-        githubData,
+        errGithubDataProfile,
+        isLoadingProfile,
+        githubDataProfile,
         githubSearchIssue,
         fetchGithubSearchIssues,
       }}

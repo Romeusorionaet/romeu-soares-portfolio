@@ -1,5 +1,5 @@
 import { HeaderBlog } from '@/components/header-blog'
-import { GithubContextProvider } from '@/contexts/github-context'
+import ClientProviders from '@/utils/client-providers'
 
 export default function BlogLayout({
   children,
@@ -8,10 +8,10 @@ export default function BlogLayout({
 }) {
   return (
     <section>
-      <GithubContextProvider>
+      <ClientProviders>
         <HeaderBlog />
         {children}
-      </GithubContextProvider>
+      </ClientProviders>
     </section>
   )
 }
