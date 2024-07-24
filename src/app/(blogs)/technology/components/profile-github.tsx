@@ -8,11 +8,17 @@ export function ProfileGithub() {
     useContext(GithubContext)
 
   if (isLoadingProfile) {
-    return <div>Carregando...</div>
+    return (
+      <img
+        className="mx-auto h-40 w-40 rounded-full border-4 border-transparent object-cover"
+        src="/gifs/loadings/loading-1.gif"
+        alt="Loading animation"
+      />
+    )
   }
 
   if (errGithubDataProfile) {
-    return <p>Problema ao acessar os dados do github</p>
+    return
   }
 
   return (
