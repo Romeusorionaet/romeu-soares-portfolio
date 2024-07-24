@@ -2,7 +2,7 @@
 
 import { apiGithub } from '@/lib/api-github'
 import { useQuery } from '@tanstack/react-query'
-import { ReactNode, createContext, useEffect, useState } from 'react'
+import { ReactNode, createContext, useState } from 'react'
 
 interface GithubDataProps {
   avatar_url: string
@@ -22,9 +22,11 @@ export interface GithubDataIssueProps {
 
 interface GithubContextType {
   errGithubDataProfile: Error | null
+  errGithubDataIssues: Error | null
   isLoadingProfile: boolean
+  isLoadingIssues: boolean
   githubDataProfile: GithubDataProps
-  githubSearchIssue: GithubDataIssueProps[]
+  githubDataIssues: GithubDataIssueProps[]
   fetchGithubSearchIssues: (search: string) => void
 }
 
@@ -47,28 +49,38 @@ export function GithubContextProvider({
       apiGithub.get(`/users/Romeusorionaet`).then((response) => response.data),
   })
 
-  const [githubSearchIssue, setGithubSearchIssue] = useState<
-    GithubDataIssueProps[]
-  >([])
+  const [search, setSearch] = useState('')
 
-  async function fetchGithubSearchIssues(search: string) {
-    await apiGithub
-      .get(`/search/issues?q=${search}%20repo:Romeusorionaet/MyGithubBlog`)
-      .then((response) => response.data)
-      .then((data) => setGithubSearchIssue(data.items))
+  const {
+    data: githubDataIssues = [],
+    isLoading: isLoadingIssues,
+    error: errGithubDataIssues,
+    refetch,
+  } = useQuery({
+    queryKey: [`issues-github`, search],
+    queryFn: () =>
+      apiGithub
+        .get(`/search/issues?q=${search}%20repo:Romeusorionaet/MyGithubBlog`)
+        .then((response) => response.data.items),
+    staleTime: 86400000, // 24 hours,
+  })
+
+  const fetchGithubSearchIssues = (searchTerm: string) => {
+    if (searchTerm.trim()) {
+      setSearch(searchTerm)
+      refetch()
+    }
   }
-
-  useEffect(() => {
-    fetchGithubSearchIssues('')
-  }, [])
 
   return (
     <GithubContext.Provider
       value={{
         errGithubDataProfile,
+        errGithubDataIssues,
         isLoadingProfile,
+        isLoadingIssues,
         githubDataProfile,
-        githubSearchIssue,
+        githubDataIssues,
         fetchGithubSearchIssues,
       }}
     >
