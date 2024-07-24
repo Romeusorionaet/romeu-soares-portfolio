@@ -1,6 +1,6 @@
 export function SelectColorForEachRoute(route: string): string {
   const predefinedRouteColors: Record<string, string> = {
-    'github-blog': 'text-emerald-500',
+    technology: 'text-emerald-500',
   }
 
   if (predefinedRouteColors[route]) {

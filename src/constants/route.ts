@@ -1,1 +1,1 @@
-export const routes = ['github-blog']
+export const routes = ['technology']

@@ -42,7 +42,7 @@ export default function DetailsIssueGithubBlog() {
     <main className="section_limiter px-4 pb-8 pt-44">
       <nav className="mb-28 flex justify-between text-sm md:text-base">
         <Link
-          href="/github-blog"
+          href="/technology"
           className="flex items-center gap-2 no-underline"
         >
           <ArrowLeft size={20} />
@@ -50,7 +50,7 @@ export default function DetailsIssueGithubBlog() {
         </Link>
 
         <a
-          href="https://github.com/Romeusorionaet/MyGithubBlog"
+          href={`https://github.com/Romeusorionaet/MyGithubBlog/issues/${params.id}`}
           target="blank"
           className="flex items-center gap-2 no-underline"
         >
