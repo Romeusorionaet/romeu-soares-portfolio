@@ -12,7 +12,7 @@ import { SkeletonCardsGithub } from './components/skeleton-cards-github'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 import { Pagination } from '@/utils/pagination'
 
-export default function GithubBlog() {
+export default function Technology() {
   const [search, setSearch] = useState('')
 
   const {
@@ -24,7 +24,7 @@ export default function GithubBlog() {
 
   const { next, prev, currentData, currentPage, maxPage } = Pagination(
     githubDataIssues || [],
-    2,
+    12,
   )
 
   if (errGithubDataIssues) {
