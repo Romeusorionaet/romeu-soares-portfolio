@@ -11,9 +11,13 @@ import { MarkDown } from '@/components/mark-down'
 import { SkeletonCardsGithub } from './components/skeleton-cards-github'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Pagination } from '@/utils/pagination'
 =======
 >>>>>>> 7eb89d7 (refactor: created function helper and constants for topics)
+=======
+import { Pagination } from '@/utils/pagination'
+>>>>>>> b5382b8 (fix: fixed import from profile github and removed hook usePagination for transformed in util function)
 
 export default function Technology() {
   const [search, setSearch] = useState('')
@@ -27,7 +31,7 @@ export default function Technology() {
 
   const { next, prev, currentData, currentPage, maxPage } = Pagination(
     githubDataIssues || [],
-    12,
+    2,
   )
 
   if (errGithubDataIssues) {
