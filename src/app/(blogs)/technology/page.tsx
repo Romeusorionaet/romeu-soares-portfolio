@@ -31,7 +31,7 @@ export default function Technology() {
 
   const { next, prev, currentData, currentPage, maxPage } = Pagination(
     githubDataIssues || [],
-    2,
+    12,
   )
 
   if (errGithubDataIssues) {
