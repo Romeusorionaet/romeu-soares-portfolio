@@ -1,5 +1,4 @@
 import { HeaderBlog } from '@/components/header-blog'
-import ClientProviders from '@/utils/client-providers'
 
 export default function BlogLayout({
   children,
@@ -8,10 +7,8 @@ export default function BlogLayout({
 }) {
   return (
     <section>
-      <ClientProviders>
-        <HeaderBlog />
-        {children}
-      </ClientProviders>
+      <HeaderBlog />
+      {children}
     </section>
   )
 }

@@ -82,7 +82,11 @@ export function Header() {
                   </DropdownMenuItem>
                 </li>
                 <li>
-                  <DropdownMenuItem>Projetos</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="/my-projects" className="no-underline">
+                      Projetos
+                    </Link>
+                  </DropdownMenuItem>
                 </li>
                 <li>
                   <DropdownMenuItem>SetUp</DropdownMenuItem>
