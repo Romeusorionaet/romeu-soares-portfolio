@@ -21,7 +21,7 @@ export function CardProject({ previewDesktop, pageURL, title }: ProjectsProps) {
           width={36}
           height={36}
           sizes="100vw"
-          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover"
+          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover hover:rounded-md hover:object-contain"
           src={previewDesktop}
           alt="Loading animation"
         />

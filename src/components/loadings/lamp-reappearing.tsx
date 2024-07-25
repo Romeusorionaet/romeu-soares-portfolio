@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export function LampReappearing() {
+export function LoadingLampReappearing() {
   return (
     <Image
       width={36}

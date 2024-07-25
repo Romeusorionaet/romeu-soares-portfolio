@@ -7,6 +7,10 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { CardProject } from './components/card-project.tsx'
 import { GetTranslateValue } from './helpers/get-translate-value'
+import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
+import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
+import { filterProjectsByType } from './helpers/filter-projects-by-type'
+import { topicsProjects } from '@/constants/topics-projects'
 
 export interface ProjectsProps {
   previewDesktop: string
@@ -17,7 +21,7 @@ export interface ProjectsProps {
 }
 
 export default function MyProjects() {
-  const [targetProject, setTargetProject] = useState('personal')
+  const [targetProject, setTargetProject] = useState(topicsProjects.PERSONAL)
 
   const targetProjectOfList = GetTranslateValue(targetProject)
 
@@ -26,7 +30,7 @@ export default function MyProjects() {
     isLoading,
     error,
   } = useQuery<ProjectsProps[]>({
-    queryKey: ['my-profile'],
+    queryKey: ['my-projects'],
     queryFn: async () => {
       const querySnapshot = await getDocs(collection(db, 'projects'))
       return querySnapshot.docs.map((doc) => ({
@@ -38,22 +42,32 @@ export default function MyProjects() {
   })
 
   if (isLoading) {
-    return <p>carregando...</p>
+    return (
+      <div className="pt-44">
+        <LoadingLampReappearing />
+      </div>
+    )
   }
 
-  if (error) {
-    return <p>algo deu errado.</p>
+  if (error || !projects) {
+    return <NoDataMessageError />
   }
 
-  if (!projects) {
-    return <p>Nem um projeto foi encontrado</p>
-  }
-
-  const projectsPersonal = projects.filter((item) => item.type === 'personal')
-  const projectsClass = projects.filter((item) => item.type === 'class')
-  const projectsFreelancer = projects.filter(
-    (item) => item.type === 'freelance',
+  const projectsPersonal = filterProjectsByType(
+    projects,
+    topicsProjects.PERSONAL,
   )
+
+  const projectsClass = filterProjectsByType(projects, topicsProjects.CLASS)
+
+  const projectsFreelancer = filterProjectsByType(
+    projects,
+    topicsProjects.FREELANCE,
+  )
+
+  const handleTargetProject = (topic: string) => {
+    setTargetProject(topic)
+  }
 
   return (
     <main className="pb-8 pt-28">
@@ -75,19 +89,19 @@ export default function MyProjects() {
 
         <ul className="flex w-80 justify-center gap-10 rounded-md p-2 uppercase">
           <li
-            onClick={() => setTargetProject('personal')}
+            onClick={() => handleTargetProject(topicsProjects.PERSONAL)}
             className="cursor-pointer"
           >
             Pessoais
           </li>
           <li
-            onClick={() => setTargetProject('class')}
+            onClick={() => handleTargetProject(topicsProjects.CLASS)}
             className="cursor-pointer"
           >
             Aula
           </li>
           <li
-            onClick={() => setTargetProject('freelancer')}
+            onClick={() => handleTargetProject(topicsProjects.FREELANCE)}
             className="cursor-pointer"
           >
             Freelancer
@@ -130,7 +144,7 @@ export default function MyProjects() {
 
         <div
           data-value={targetProject}
-          className="container_card_project data-[value=freelancer]:flex"
+          className="container_card_project data-[value=freelance]:flex"
         >
           {projectsFreelancer.map((item) => {
             return (
