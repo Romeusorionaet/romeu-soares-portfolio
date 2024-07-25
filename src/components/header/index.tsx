@@ -83,6 +83,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-50">
               <DropdownMenuSeparator />
+<<<<<<< HEAD
               <Link href="/" className="no-underline">
                 <DropdownMenuItem>Início</DropdownMenuItem>
               </Link>
@@ -95,6 +96,38 @@ export function Header() {
               <Link href="/gear" className="no-underline">
                 <DropdownMenuItem>Setup</DropdownMenuItem>
               </Link>
+=======
+              <ul>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/" className="no-underline">
+                      Início
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/about" className="no-underline">
+                      Sobre
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/my-projects" className="no-underline">
+                      Projetos
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+                <li>
+                  <DropdownMenuItem>
+                    <Link href="/gear" className="no-underline">
+                      Setup
+                    </Link>
+                  </DropdownMenuItem>
+                </li>
+              </ul>
+>>>>>>> 8b3766a (feat: created page setup)
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
