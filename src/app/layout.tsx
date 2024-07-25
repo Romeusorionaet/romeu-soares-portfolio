@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Prompt, Slackey } from 'next/font/google'
 import '../assets/styles/global.css'
 import '../assets/styles/scrollbar.css'
+import ClientProviders from '@/utils/client-providers'
 
 const prompt = Prompt({
   subsets: ['latin'],
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${prompt.variable} ${slackey.variable} antialiased`}>
-        {children}
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   )

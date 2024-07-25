@@ -13,7 +13,7 @@ import { BookOpenText, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
 import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
-import { TitleMap, translateTitle } from '@/utils/translate-title'
+import { TitleMap, TranslateTitle } from '@/utils/translate-title'
 
 export function HeaderBlog() {
   const pathname = usePathname()
@@ -27,7 +27,7 @@ export function HeaderBlog() {
     technology: 'Tecnologia',
   }
 
-  const titleTranslated = translateTitle(pageName, titleTranslations)
+  const titleTranslated = TranslateTitle(pageName, titleTranslations)
 
   const title = isInitialPageBLog ? titleTranslated : <BookOpenText size={40} />
 

@@ -78,4 +78,7 @@
     .markdown li {
       @apply p-2 bg-white/40 rounded-md text-white/80
     }
+    .container_card_project {
+      @apply hidden w-full flex-wrap items-center justify-center max-md:flex-col md:gap-8
+    }
   } 
