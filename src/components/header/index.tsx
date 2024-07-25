@@ -16,6 +16,7 @@ import whatsApp from '../../assets/img/header-img/whatsApp.png'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
 
 const socialMediaOptions = {
   GITHUB: 'github',
@@ -27,6 +28,7 @@ const socialMediaOptions = {
 export function Header() {
   const [stateEventMouseHover, setStateEventMouseHover] = useState(false)
   const [showImg, setShowImg] = useState<StaticImageData | null>(null)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleMouseEnter = (mouseOn: string) => {
     switch (mouseOn) {
@@ -60,10 +62,15 @@ export function Header() {
 
   return (
     <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
-      <div className="section_limiter flex justify-between">
-        <nav>
-          <DropdownMenu>
-            <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
+      <section className="section_limiter flex justify-between">
+        <nav
+          onMouseEnter={() => setMenuOpen(true)}
+          onMouseLeave={() => setMenuOpen(false)}
+        >
+          <DropdownMenu open={menuOpen}>
+            <DropdownMenuTrigger className="flex gap-2">
+              <span>Menu</span> <ChevronDown />
+            </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-50">
               <DropdownMenuSeparator />
               <ul>
@@ -176,7 +183,7 @@ export function Header() {
             )}
           </div>
         </div>
-      </div>
+      </section>
     </header>
   )
 }
