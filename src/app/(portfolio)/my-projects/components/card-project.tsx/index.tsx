@@ -45,6 +45,7 @@ export function CardProject({
         className="h-full w-full duration-700"
         rel="noreferrer"
       >
+<<<<<<< HEAD
         {preview && (
           <Image
             width={36}
@@ -55,6 +56,16 @@ export function CardProject({
             alt={`Preview of ${title}`}
           />
         )}
+=======
+        <Image
+          width={36}
+          height={36}
+          sizes="100vw"
+          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover hover:rounded-md hover:object-contain"
+          src={previewDesktop}
+          alt="Loading animation"
+        />
+>>>>>>> 7eb89d7 (refactor: created function helper and constants for topics)
       </a>
     </div>
   )

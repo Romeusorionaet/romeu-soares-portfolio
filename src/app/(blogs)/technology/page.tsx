@@ -10,7 +10,10 @@ import Link from 'next/link'
 import { MarkDown } from '@/components/mark-down'
 import { SkeletonCardsGithub } from './components/skeleton-cards-github'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
+<<<<<<< HEAD
 import { Pagination } from '@/utils/pagination'
+=======
+>>>>>>> 7eb89d7 (refactor: created function helper and constants for topics)
 
 export default function Technology() {
   const [search, setSearch] = useState('')
