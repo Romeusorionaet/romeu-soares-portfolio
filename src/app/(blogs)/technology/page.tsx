@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext, useState } from 'react'
+import { FormEvent, useContext, useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
@@ -31,7 +31,7 @@ export default function GithubBlog() {
     return <NoDataMessageError />
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault()
 
     fetchGithubSearchIssues(search)

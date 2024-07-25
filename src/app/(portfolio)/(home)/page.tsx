@@ -4,6 +4,7 @@ import { CardsStacksFrontEnd } from '@/components/cards-stacks/cards-stacks-fron
 import Link from 'next/link'
 import { SectionVideosOnTopics } from '@/components/section-videos-on-topics'
 import { Code2Icon } from 'lucide-react'
+import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function Home() {
   return (
@@ -63,31 +64,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-4 mt-10 flex flex-col items-center justify-center gap-4">
-          <h2 className="text-2xl font-bold">Saber mais sobre:</h2>
-
-          <div className="flex items-center justify-center gap-4 text-foreground">
-            <Link
-              className="rounded-md bg-dark-1 p-1 no-underline hover:scale-105"
-              href={'/developer/front-end'}
-            >
-              Front-End
-            </Link>
-            <Link
-              className="rounded-md bg-dark-1 p-1 no-underline hover:scale-105"
-              href={'/developer/back-end'}
-            >
-              Back-End
-            </Link>
-          </div>
-
-          <a
-            href="/romeu-soares-programador-front-end.pdf"
-            download="Curriculo.pdf"
-          >
-            Baixar Currículo
-          </a>
-        </div>
+        <TopicsNavigation />
       </section>
 
       <SectionVideosOnTopics />

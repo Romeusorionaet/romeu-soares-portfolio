@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import profile from '@/assets/img/avatar/romeu-profile.png'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
+import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function About() {
   return (
-    <main className="relative overflow-hidden px-4 py-28">
+    <main className="relative space-y-8 overflow-hidden px-4 py-28">
       {Array.from({ length: 10 }).map((_, index) => (
         <MovingBackgroundBalls key={index} />
       ))}
@@ -62,7 +63,9 @@ export default function About() {
             com seu projeto e fazer a diferença.
           </p>
         </div>
+      </section>
 
+      <section className="section_limiter space-y-8">
         <h2 className="text-lg md:text-xl">Meus certificados</h2>
 
         <div className="flex flex-col gap-2 text-sm">
@@ -179,6 +182,8 @@ export default function About() {
           </a>
         </div>
       </section>
+
+      <TopicsNavigation />
     </main>
   )
 }
