@@ -14,9 +14,9 @@ import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { MarkDown } from '@/components/mark-down'
 import { useQuery } from '@tanstack/react-query'
-import { NoDataMessageError } from '@/components/message-error/no-data-message-error'
-import { LampReappearing } from '@/components/loadings/lamp-reappearing'
+import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 import { GithubDataIssueProps } from '@/contexts/github-context'
+import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
 
 export default function DetailsIssueGithubBlog() {
   const params = useParams()
@@ -37,7 +37,7 @@ export default function DetailsIssueGithubBlog() {
   if (isLoadingIssueDetails) {
     return (
       <div className="pt-40">
-        <LampReappearing />
+        <LoadingLampReappearing />
       </div>
     )
   }

@@ -4,7 +4,7 @@ export function GetTranslateValue(targetProject: string) {
       return 'translate-x-0'
     case 'class':
       return 'translate-x-24'
-    case 'freelancer':
+    case 'freelance':
       return 'translate-x-52'
     default:
       return 'translate-x-0'

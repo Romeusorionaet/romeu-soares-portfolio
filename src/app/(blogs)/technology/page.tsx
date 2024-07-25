@@ -10,7 +10,7 @@ import { ControlButtonsPagination } from '@/components/control-buttons-paginatio
 import Link from 'next/link'
 import { MarkDown } from '@/components/mark-down'
 import { SkeletonCardsGithub } from './components/skeleton-cards-github'
-import { NoDataMessageError } from '@/components/message-error/no-data-message-error'
+import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 
 export default function GithubBlog() {
   const [search, setSearch] = useState('')
