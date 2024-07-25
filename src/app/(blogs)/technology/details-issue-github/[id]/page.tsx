@@ -10,33 +10,41 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { MarkDown } from '@/components/mark-down'
+import { useQuery } from '@tanstack/react-query'
+import { NoDataMessageError } from '@/components/message-error/no-data-message-error'
+import { LampReappearing } from '@/components/loadings/lamp-reappearing'
+import { GithubDataIssueProps } from '@/contexts/github-context'
 
 export default function DetailsIssueGithubBlog() {
-  const [issueCardDetails, setIssueCardDetails] = useState({
-    title: '',
-    body: '',
-    user: { login: '' },
-    updated_at: '',
-    comments: '',
-  })
-
   const params = useParams()
 
-  useEffect(() => {
-    async function fetchIssueDetails() {
-      await apiGithub
+  const {
+    data: issueDetails,
+    isLoading: isLoadingIssueDetails,
+    error: errIssueDetails,
+  } = useQuery<GithubDataIssueProps>({
+    queryKey: ['github-issue-details'],
+    queryFn: () =>
+      apiGithub
         .get(`/repos/Romeusorionaet/MyGithubBlog/issues/${params.id}`)
-        .then((response) => response.data)
-        .then((data) => setIssueCardDetails(data))
-        .catch((err) => console.log(err))
-    }
+        .then((response) => response.data),
+    staleTime: 86400000, // 24 hours,
+  })
 
-    fetchIssueDetails()
-  }, [params])
+  if (isLoadingIssueDetails) {
+    return (
+      <div className="pt-40">
+        <LampReappearing />
+      </div>
+    )
+  }
+
+  if (errIssueDetails) {
+    return <NoDataMessageError />
+  }
 
   return (
     <main className="section_limiter px-4 pb-8 pt-44">
@@ -59,37 +67,39 @@ export default function DetailsIssueGithubBlog() {
         </a>
       </nav>
 
-      <article className="mx-auto w-full max-w-[900px]">
-        <header className="space-y-8">
-          <h2 className="text-xl font-bold">{issueCardDetails.title}</h2>
+      {issueDetails && (
+        <article className="mx-auto w-full max-w-[900px]">
+          <header className="space-y-8">
+            <h2 className="text-xl font-bold">{issueDetails.title}</h2>
 
-          <div>
-            <div className="flex gap-2">
-              <User size={20} color="#7B96B2" />
-              <span>{issueCardDetails.user.login}</span>
+            <div>
+              <div className="flex gap-2">
+                <User size={20} color="#7B96B2" />
+                <span>{issueDetails.user.login}</span>
+              </div>
+
+              <div className="flex gap-2">
+                <Calendar size={20} color="#7B96B2" />
+
+                <span>
+                  Há{' '}
+                  {issueDetails.updated_at &&
+                    formatDistanceToNow(new Date(issueDetails.updated_at), {
+                      locale: ptBR,
+                    })}
+                </span>
+              </div>
+
+              <div className="flex gap-2">
+                <MessageCircleMoreIcon size={20} color="#7B96B2" />
+                <span>{issueDetails.comments} comentários</span>
+              </div>
             </div>
+          </header>
 
-            <div className="flex gap-2">
-              <Calendar size={20} color="#7B96B2" />
-
-              <span>
-                Há{' '}
-                {issueCardDetails.updated_at &&
-                  formatDistanceToNow(new Date(issueCardDetails.updated_at), {
-                    locale: ptBR,
-                  })}
-              </span>
-            </div>
-
-            <div className="flex gap-2">
-              <MessageCircleMoreIcon size={20} color="#7B96B2" />
-              <span>{issueCardDetails.comments} comentários</span>
-            </div>
-          </div>
-        </header>
-
-        <MarkDown content={issueCardDetails.body.toString()} />
-      </article>
+          <MarkDown content={issueDetails.body.toString()} />
+        </article>
+      )}
     </main>
   )
 }

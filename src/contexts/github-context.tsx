@@ -14,10 +14,12 @@ interface GithubDataProps {
 }
 
 export interface GithubDataIssueProps {
+  user: { login: string }
   number: number
   title: string
   body: string
   updated_at: string
+  comments: number
 }
 
 interface GithubContextType {
@@ -39,6 +41,8 @@ export const GithubContext = createContext({} as GithubContextType)
 export function GithubContextProvider({
   children,
 }: GithubContextProviderProps) {
+  const [search, setSearch] = useState('')
+
   const {
     data: githubDataProfile,
     isLoading: isLoadingProfile,
@@ -47,9 +51,8 @@ export function GithubContextProvider({
     queryKey: ['profile-github'],
     queryFn: () =>
       apiGithub.get(`/users/Romeusorionaet`).then((response) => response.data),
+    staleTime: 86400000, // 24 hours,
   })
-
-  const [search, setSearch] = useState('')
 
   const {
     data: githubDataIssues = [],

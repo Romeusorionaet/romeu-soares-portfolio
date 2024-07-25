@@ -2,19 +2,14 @@ import { GithubContext } from '@/contexts/github-context'
 import { Book, Building, User, Users } from 'lucide-react'
 import { useContext } from 'react'
 import Image from 'next/image'
+import { LampReappearing } from '@/components/loadings/lamp-reappearing'
 
 export function ProfileGithub() {
   const { githubDataProfile, isLoadingProfile, errGithubDataProfile } =
     useContext(GithubContext)
 
   if (isLoadingProfile) {
-    return (
-      <img
-        className="mx-auto h-40 w-40 rounded-full border-4 border-transparent object-cover"
-        src="/gifs/loadings/loading-1.gif"
-        alt="Loading animation"
-      />
-    )
+    return <LampReappearing />
   }
 
   if (errGithubDataProfile) {
