@@ -5,12 +5,12 @@ import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
 import { ProfileGithub } from './components/profile-github'
-import { usePagination } from '@/hook/use-pagination'
 import { ControlButtonsPagination } from '@/components/control-buttons-pagination'
 import Link from 'next/link'
 import { MarkDown } from '@/components/mark-down'
 import { SkeletonCardsGithub } from './components/skeleton-cards-github'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
+import { Pagination } from '@/utils/pagination'
 
 export default function GithubBlog() {
   const [search, setSearch] = useState('')
@@ -22,9 +22,9 @@ export default function GithubBlog() {
     isLoadingIssues,
   } = useContext(GithubContext)
 
-  const { next, prev, currentData, currentPage, maxPage } = usePagination(
+  const { next, prev, currentData, currentPage, maxPage } = Pagination(
     githubDataIssues || [],
-    12,
+    2,
   )
 
   if (errGithubDataIssues) {

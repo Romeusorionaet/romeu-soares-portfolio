@@ -1,10 +1,6 @@
-import { GithubDataIssueProps } from '@/contexts/github-context'
 import { useState } from 'react'
 
-export function usePagination(
-  data: GithubDataIssueProps[],
-  itemsPerPage: number,
-) {
+export function Pagination(data: any, itemsPerPage: number) {
   const [currentPage, setCurrentPage] = useState(1)
 
   const maxPage = Math.ceil(data.length / itemsPerPage)
