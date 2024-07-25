@@ -96,7 +96,11 @@ export function Header() {
                   </DropdownMenuItem>
                 </li>
                 <li>
-                  <DropdownMenuItem>SetUp</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link href="/gear" className="no-underline">
+                      Setup
+                    </Link>
+                  </DropdownMenuItem>
                 </li>
               </ul>
             </DropdownMenuContent>
