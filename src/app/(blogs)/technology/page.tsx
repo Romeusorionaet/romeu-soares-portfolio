@@ -9,17 +9,9 @@ import { ControlButtonsPagination } from '@/components/control-buttons-paginatio
 import Link from 'next/link'
 import { MarkDown } from '@/components/mark-down'
 import { SkeletonCardsGithub } from './components/skeleton-cards-github'
-import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Pagination } from '@/utils/pagination'
-=======
->>>>>>> 7eb89d7 (refactor: created function helper and constants for topics)
-=======
-import { Pagination } from '@/utils/pagination'
->>>>>>> b5382b8 (fix: fixed import from profile github and removed hook usePagination for transformed in util function)
+import { NoDataMessageError } from '@/components/message-error/no-data-message-error'
 
-export default function Technology() {
+export default function GithubBlog() {
   const [search, setSearch] = useState('')
 
   const {

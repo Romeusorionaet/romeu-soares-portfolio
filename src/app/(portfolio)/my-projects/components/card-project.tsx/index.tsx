@@ -49,7 +49,7 @@ export function CardProject({
           width={36}
           height={36}
           sizes="100vw"
-          className="mx-auto h-full w-full rounded-md border-4 border-transparent object-cover"
+          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover"
           src={previewDesktop}
           alt="Loading animation"
         />

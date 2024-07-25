@@ -8,11 +8,7 @@ export function GetTranslateValue(targetProject: string) {
       return 'translate-x-28'
 =======
       return 'translate-x-24'
->>>>>>> 7eb89d7 (refactor: created function helper and constants for topics)
-=======
-      return 'translate-x-28'
->>>>>>> ead0990 (fixed value css from layouts)
-    case 'freelance':
+    case 'freelancer':
       return 'translate-x-52'
     default:
       return 'translate-x-0'
