@@ -2,14 +2,14 @@ import { GithubContext } from '@/contexts/github-context'
 import { Book, Building, User, Users } from 'lucide-react'
 import { useContext } from 'react'
 import Image from 'next/image'
-import { LampReappearing } from '@/components/loadings/lamp-reappearing'
+import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
 
 export function ProfileGithub() {
   const { githubDataProfile, isLoadingProfile, errGithubDataProfile } =
     useContext(GithubContext)
 
   if (isLoadingProfile) {
-    return <LampReappearing />
+    return <LoadingLampReappearing />
   }
 
   if (errGithubDataProfile) {
