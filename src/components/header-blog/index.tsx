@@ -59,13 +59,6 @@ export function HeaderBlog() {
               <span>Outros Blogs</span> <ChevronDown />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-100">
-<<<<<<< HEAD
-              <DropdownMenuLabel>
-                (Outros temas estão em produção)
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Tecnologia</DropdownMenuItem>
-=======
               <DropdownMenuLabel>Temas</DropdownMenuLabel>
               <DropdownMenuSeparator />
 <<<<<<< HEAD
@@ -93,7 +86,6 @@ export function HeaderBlog() {
               <DropdownMenuItem>Filmes e series</DropdownMenuItem>
               <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
               <DropdownMenuItem>Ufologia</DropdownMenuItem>
->>>>>>> ead0990 (fixed value css from layouts)
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
