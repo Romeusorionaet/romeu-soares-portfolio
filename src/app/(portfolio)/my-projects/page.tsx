@@ -14,6 +14,7 @@ import { topicsProjects } from '@/constants/topics-projects'
 
 export interface ProjectsProps {
   previewDesktop: string
+  previewMobile: string
   pageURL: string
   title: string
   type: string
@@ -119,6 +120,7 @@ export default function MyProjects() {
               <CardProject
                 key={item.id}
                 previewDesktop={item.previewDesktop}
+                previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
               />
@@ -135,6 +137,7 @@ export default function MyProjects() {
               <CardProject
                 key={item.id}
                 previewDesktop={item.previewDesktop}
+                previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
               />
@@ -151,6 +154,7 @@ export default function MyProjects() {
               <CardProject
                 key={item.id}
                 previewDesktop={item.previewDesktop}
+                previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
               />
