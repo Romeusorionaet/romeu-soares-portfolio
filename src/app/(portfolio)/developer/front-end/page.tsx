@@ -12,16 +12,16 @@ import { MovingBackgroundBalls } from '@/components/moving-card/moving-backgroun
 
 export default function FrontEnd() {
   return (
-    <main className="relative overflow-hidden px-4 py-28">
+    <main className="relative overflow-hidden px-4">
       {Array.from({ length: 10 }).map((_, index) => (
         <MovingBackgroundBalls key={index} />
       ))}
 
-      <h1 className="style_title_1 online-block mx-auto w-5/6 text-center">
+      <h1 className="style_title_1 online-block mx-auto mt-40 w-5/6 text-center">
         Meus conhecimentos como programador Front-End
       </h1>
 
-      <section className="section_limiter mt-28 flex flex-col gap-6">
+      <section className="section_limiter mt-28 flex flex-col gap-6 pb-28">
         <div>
           <div className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">React</h2>
