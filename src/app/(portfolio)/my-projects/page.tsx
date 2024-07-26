@@ -70,7 +70,7 @@ export default function MyProjects() {
   }
 
   return (
-    <main className="pb-8 pt-28">
+    <main className="pb-28 pt-40">
       <h1 className="style_title_1 text-center">Meus projetos web</h1>
 
       <section className="section_limiter relative mt-28 px-4">
@@ -92,19 +92,19 @@ export default function MyProjects() {
             onClick={() => handleTargetProject(topicsProjects.PERSONAL)}
             className="cursor-pointer"
           >
-            Pessoais
+            <button>Pessoais</button>
           </li>
           <li
             onClick={() => handleTargetProject(topicsProjects.CLASS)}
             className="cursor-pointer"
           >
-            Aula
+            <button>Aula</button>
           </li>
           <li
             onClick={() => handleTargetProject(topicsProjects.FREELANCE)}
             className="cursor-pointer"
           >
-            Freelancer
+            <button>Freelancer</button>
           </li>
         </ul>
       </section>

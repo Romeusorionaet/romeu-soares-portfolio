@@ -66,11 +66,11 @@ export default function Technology() {
           currentData().map((issue: GithubDataIssueProps) => (
             <article
               key={issue.number}
-              className="bg-fill relative flex h-44 w-80 flex-col overflow-hidden rounded-md border-t bg-[url('/backgrounds/github.png')] bg-left bg-no-repeat text-sm duration-500 hover:scale-105 md:w-96 md:text-base"
+              className="bg-fill relative flex h-44 w-80 flex-col overflow-hidden rounded-md border-t bg-[url('/backgrounds/github.png')] bg-left bg-no-repeat text-sm duration-500 focus-within:border-emerald-500 hover:scale-105 md:w-96 md:text-base"
             >
               <Link
                 href={`/technology/details-issue-github/${issue.number}`}
-                className="no-underline"
+                className="no-underline outline-emerald-500"
               >
                 <header className="line-clamp-2 flex h-16 justify-between gap-1 px-2 py-1 max-md:flex-col md:h-12">
                   <h2 className="font-bold underline">{issue.title}</h2>
