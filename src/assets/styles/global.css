@@ -55,7 +55,7 @@
       @apply max-w-[1680px] mx-auto w-full
     }
     .style_title_1 {
-      @apply max-lg:text-6xl max-md:text-4xl lg:text-7xl
+      @apply max-lg:text-5xl max-md:text-2xl lg:text-6xl
     }
     .hover_expand_list {
       @apply mt-2 border-b border-white/50 max-h-0 list-inside list-disc overflow-auto opacity-0

@@ -8,11 +8,11 @@ import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function Home() {
   return (
-    <main className="pb-8 pt-28">
+    <main className="pb-20">
       <BackgroundOne />
 
-      <section className="section_limiter relative h-hbp_0 space-y-4 px-4 lg:h-hbp_2">
-        <h1 className="style_title_1">Hello World!</h1>
+      <section className="section_limiter relative flex h-hbp_0 flex-col justify-center gap-4 px-4 lg:h-hbp_2">
+        <h1 className="style_title_1 max-md:text-center">Programador Web</h1>
 
         <div className="space-y-4 md:w-1/2">
           <h2 className="text-lg md:text-xl">
