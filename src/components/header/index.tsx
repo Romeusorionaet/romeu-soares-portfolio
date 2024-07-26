@@ -18,6 +18,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { socialMediaOptions } from '@/constants/social-media-options'
 import { socialLinks } from './social-link'
 =======
@@ -29,11 +30,14 @@ const socialMediaOptions = {
   WHATSAPP: 'whatsApp',
 }
 >>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
+=======
+import { socialMediaOptions } from '@/constants/social-media-options'
+import { socialLinks } from './social-link'
+>>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
 
 export function Header() {
   const [stateEventMouseHover, setStateEventMouseHover] = useState(false)
   const [showImg, setShowImg] = useState<StaticImageData | null>(null)
-  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleMouseEnter = (mouseOn: string) => {
     switch (mouseOn) {
@@ -69,6 +73,7 @@ export function Header() {
     <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
       <section className="section_limiter flex justify-between">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <nav>
           <DropdownMenu>
 =======
@@ -78,12 +83,19 @@ export function Header() {
         >
           <DropdownMenu open={menuOpen}>
 >>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
+=======
+        <nav>
+          <DropdownMenu>
+>>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
             <DropdownMenuTrigger className="flex gap-2">
               <span>Menu</span> <ChevronDown />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-50">
               <DropdownMenuSeparator />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
               <Link href="/" className="no-underline">
                 <DropdownMenuItem>Início</DropdownMenuItem>
               </Link>
@@ -96,6 +108,7 @@ export function Header() {
               <Link href="/gear" className="no-underline">
                 <DropdownMenuItem>Setup</DropdownMenuItem>
               </Link>
+<<<<<<< HEAD
 =======
               <ul>
                 <li>
@@ -128,6 +141,8 @@ export function Header() {
                 </li>
               </ul>
 >>>>>>> 8b3766a (feat: created page setup)
+=======
+>>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
@@ -170,7 +185,10 @@ export function Header() {
                 onMouseEnter={() => handleMouseEnter(social.mouseEnterOption)}
                 onMouseLeave={handleMouseLeave}
                 onFocus={() => handleMouseEnter(social.mouseEnterOption)}
+<<<<<<< HEAD
                 onBlur={handleMouseLeave}
+=======
+>>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
               >
                 <a
                   href={social.href}
