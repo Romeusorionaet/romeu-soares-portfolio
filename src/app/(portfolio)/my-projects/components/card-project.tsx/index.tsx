@@ -36,13 +36,21 @@ export function CardProject({
   }, [previewDesktop, previewMobile])
 
   return (
+<<<<<<< HEAD
     <div className="flex h-[28rem] w-52 flex-col items-center rounded-md p-2 lg:h-[16rem] lg:w-[24rem]">
+=======
+    <div className="flex h-72 w-96 flex-col items-center rounded-md p-2">
+>>>>>>> ead0990 (fixed value css from layouts)
       <h2>{title}</h2>
 
       <a
         href={pageURL}
         target="_blank"
+<<<<<<< HEAD
         className="h-full w-full duration-700"
+=======
+        className="h-44 w-full duration-700"
+>>>>>>> ead0990 (fixed value css from layouts)
         rel="noreferrer"
       >
 <<<<<<< HEAD
@@ -61,7 +69,7 @@ export function CardProject({
           width={36}
           height={36}
           sizes="100vw"
-          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover hover:rounded-md hover:object-contain"
+          className="mx-auto h-full w-full rounded-md border-4 border-transparent object-cover"
           src={previewDesktop}
           alt="Loading animation"
         />
