@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function TopicsNavigation() {
   return (
-    <section className="mb-4 mt-10 flex flex-col items-center justify-center gap-4">
+    <section className="mb-4 mt-16 flex flex-col items-center justify-center gap-4">
       <h2 className="text-2xl font-bold">Saber mais sobre:</h2>
 
       <nav className="flex items-center justify-center gap-4 text-foreground">
