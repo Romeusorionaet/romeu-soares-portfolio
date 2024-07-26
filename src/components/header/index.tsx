@@ -17,18 +17,12 @@ import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
-
-const socialMediaOptions = {
-  GITHUB: 'github',
-  LINKEDIN: 'linkedin',
-  INSTAGRAM: 'instagram',
-  WHATSAPP: 'whatsApp',
-}
+import { socialMediaOptions } from '@/constants/social-media-options'
+import { socialLinks } from './social-link'
 
 export function Header() {
   const [stateEventMouseHover, setStateEventMouseHover] = useState(false)
   const [showImg, setShowImg] = useState<StaticImageData | null>(null)
-  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleMouseEnter = (mouseOn: string) => {
     switch (mouseOn) {
@@ -63,46 +57,25 @@ export function Header() {
   return (
     <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
       <section className="section_limiter flex justify-between">
-        <nav
-          onMouseEnter={() => setMenuOpen(true)}
-          onMouseLeave={() => setMenuOpen(false)}
-        >
-          <DropdownMenu open={menuOpen}>
+        <nav>
+          <DropdownMenu>
             <DropdownMenuTrigger className="flex gap-2">
               <span>Menu</span> <ChevronDown />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-50">
               <DropdownMenuSeparator />
-              <ul>
-                <li>
-                  <DropdownMenuItem>
-                    <Link href="/" className="no-underline">
-                      Início
-                    </Link>
-                  </DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>
-                    <Link href="/about" className="no-underline">
-                      Sobre
-                    </Link>
-                  </DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>
-                    <Link href="/my-projects" className="no-underline">
-                      Projetos
-                    </Link>
-                  </DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>
-                    <Link href="/gear" className="no-underline">
-                      Setup
-                    </Link>
-                  </DropdownMenuItem>
-                </li>
-              </ul>
+              <Link href="/" className="no-underline">
+                <DropdownMenuItem>Início</DropdownMenuItem>
+              </Link>
+              <Link href="/about" className="no-underline">
+                <DropdownMenuItem>Sobre</DropdownMenuItem>
+              </Link>
+              <Link href="/my-projects" className="no-underline">
+                <DropdownMenuItem>Projetos</DropdownMenuItem>
+              </Link>
+              <Link href="/gear" className="no-underline">
+                <DropdownMenuItem>Setup</DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
@@ -123,49 +96,39 @@ export function Header() {
               <DropdownMenuContent className="bg-cyan-50">
                 <DropdownMenuLabel>Conecte-se</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Github</DropdownMenuItem>
-                <DropdownMenuItem>LinkedIn</DropdownMenuItem>
-                <DropdownMenuItem>Instagram</DropdownMenuItem>
-                <DropdownMenuItem>WhatsApp</DropdownMenuItem>
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="no-underline"
+                  >
+                    <DropdownMenuItem>{social.name}</DropdownMenuItem>
+                  </a>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
 
           <ul className="flex gap-8 max-md:hidden">
-            <li
-              onMouseEnter={() => handleMouseEnter(socialMediaOptions.GITHUB)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a href="" target="_blank" className="no-underline">
-                Github
-              </a>
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter(socialMediaOptions.LINKEDIN)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a href="" target="_blank" className="no-underline">
-                LinkedIn
-              </a>
-            </li>
-            <li
-              onMouseEnter={() =>
-                handleMouseEnter(socialMediaOptions.INSTAGRAM)
-              }
-              onMouseLeave={handleMouseLeave}
-            >
-              <a href="" target="_blank" className="no-underline">
-                Instagram
-              </a>
-            </li>
-            <li
-              onMouseEnter={() => handleMouseEnter(socialMediaOptions.WHATSAPP)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a href="" target="_blank" className="no-underline">
-                WhatsApp
-              </a>
-            </li>
+            {socialLinks.map((social) => (
+              <li
+                key={social.name}
+                onMouseEnter={() => handleMouseEnter(social.mouseEnterOption)}
+                onMouseLeave={handleMouseLeave}
+                onFocus={() => handleMouseEnter(social.mouseEnterOption)}
+              >
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="no-underline"
+                >
+                  {social.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
 
