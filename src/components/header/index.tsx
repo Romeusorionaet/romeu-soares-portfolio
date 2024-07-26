@@ -186,9 +186,13 @@ export function Header() {
                 onMouseLeave={handleMouseLeave}
                 onFocus={() => handleMouseEnter(social.mouseEnterOption)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onBlur={handleMouseLeave}
 =======
 >>>>>>> f272be2 (refactor: reused social links, created constants for social media options / accessibility: fixed menu options navigation for turn more accessible)
+=======
+                onBlur={handleMouseLeave}
+>>>>>>> ead0990 (fixed value css from layouts)
               >
                 <a
                   href={social.href}

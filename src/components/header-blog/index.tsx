@@ -14,11 +14,8 @@ import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
 import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
 import { TitleMap, TranslateTitle } from '@/utils/translate-title'
-import { useState } from 'react'
 
 export function HeaderBlog() {
-  const [menuOpen, setMenuOpen] = useState(false)
-
   const pathname = usePathname()
   const parts = pathname.split('/')
   const pageName = parts[parts.length - 1]
@@ -44,6 +41,7 @@ export function HeaderBlog() {
         </Link>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <nav>
           <DropdownMenu>
 =======
@@ -53,6 +51,10 @@ export function HeaderBlog() {
         >
           <DropdownMenu open={menuOpen}>
 >>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
+=======
+        <nav>
+          <DropdownMenu>
+>>>>>>> ead0990 (fixed value css from layouts)
             <DropdownMenuTrigger className="flex items-center hover:scale-105">
               <span>Outros Blogs</span> <ChevronDown />
             </DropdownMenuTrigger>
@@ -66,6 +68,7 @@ export function HeaderBlog() {
 =======
               <DropdownMenuLabel>Temas</DropdownMenuLabel>
               <DropdownMenuSeparator />
+<<<<<<< HEAD
               <ul>
                 <li>
                   <DropdownMenuItem>Progromação</DropdownMenuItem>
@@ -84,6 +87,13 @@ export function HeaderBlog() {
                 </li>
               </ul>
 >>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
+=======
+              <DropdownMenuItem>Tecnologia</DropdownMenuItem>
+              <DropdownMenuItem>Livros</DropdownMenuItem>
+              <DropdownMenuItem>Filmes e series</DropdownMenuItem>
+              <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
+              <DropdownMenuItem>Ufologia</DropdownMenuItem>
+>>>>>>> ead0990 (fixed value css from layouts)
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
