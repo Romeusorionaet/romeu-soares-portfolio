@@ -118,6 +118,7 @@ export function Header() {
                 onMouseEnter={() => handleMouseEnter(social.mouseEnterOption)}
                 onMouseLeave={handleMouseLeave}
                 onFocus={() => handleMouseEnter(social.mouseEnterOption)}
+                onBlur={handleMouseLeave}
               >
                 <a
                   href={social.href}

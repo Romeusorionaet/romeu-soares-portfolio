@@ -8,20 +8,20 @@ interface ProjectsProps {
 
 export function CardProject({ previewDesktop, pageURL, title }: ProjectsProps) {
   return (
-    <div className="flex h-72 w-96 flex-col items-center rounded-md bg-background p-2">
+    <div className="flex h-72 w-96 flex-col items-center rounded-md p-2">
       <h2>{title}</h2>
 
       <a
         href={pageURL}
         target="_blank"
-        className="h-44 w-full duration-700 hover:h-full"
+        className="h-44 w-full duration-700"
         rel="noreferrer"
       >
         <Image
           width={36}
           height={36}
           sizes="100vw"
-          className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover hover:rounded-md hover:object-contain"
+          className="mx-auto h-full w-full rounded-md border-4 border-transparent object-cover"
           src={previewDesktop}
           alt="Loading animation"
         />

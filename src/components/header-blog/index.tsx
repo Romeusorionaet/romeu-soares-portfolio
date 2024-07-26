@@ -14,11 +14,8 @@ import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
 import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
 import { TitleMap, TranslateTitle } from '@/utils/translate-title'
-import { useState } from 'react'
 
 export function HeaderBlog() {
-  const [menuOpen, setMenuOpen] = useState(false)
-
   const pathname = usePathname()
   const parts = pathname.split('/')
   const pageName = parts[parts.length - 1]
@@ -43,34 +40,19 @@ export function HeaderBlog() {
           Portfólio
         </Link>
 
-        <nav
-          onMouseEnter={() => setMenuOpen(true)}
-          onMouseLeave={() => setMenuOpen(false)}
-        >
-          <DropdownMenu open={menuOpen}>
+        <nav>
+          <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center hover:scale-105">
               <span>Outros Blogs</span> <ChevronDown />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-100">
               <DropdownMenuLabel>Temas</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <ul>
-                <li>
-                  <DropdownMenuItem>Progromação</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Livros</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Filmes e series</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Ufologia</DropdownMenuItem>
-                </li>
-              </ul>
+              <DropdownMenuItem>Tecnologia</DropdownMenuItem>
+              <DropdownMenuItem>Livros</DropdownMenuItem>
+              <DropdownMenuItem>Filmes e series</DropdownMenuItem>
+              <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
+              <DropdownMenuItem>Ufologia</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
