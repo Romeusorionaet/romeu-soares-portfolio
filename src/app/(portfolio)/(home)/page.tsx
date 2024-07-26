@@ -2,13 +2,12 @@ import { BackgroundOne } from '@/components/backgounds/background-one'
 import { CardsStacksBackEnd } from '@/components/cards-stacks/cards-stacks-back-end'
 import { CardsStacksFrontEnd } from '@/components/cards-stacks/cards-stacks-front-end'
 import Link from 'next/link'
-import { SectionVideosOnTopics } from '@/components/section-videos-on-topics'
 import { Code2Icon } from 'lucide-react'
 import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function Home() {
   return (
-    <main className="pb-20">
+    <main>
       <BackgroundOne />
 
       <section className="section_limiter relative flex h-hbp_0 flex-col justify-center gap-4 px-4 lg:h-hbp_2">
@@ -20,9 +19,9 @@ export default function Home() {
           </h2>
           <p className="max-md:text-sm">
             Sua visita é sempre bem-vinda aqui! Preparei esta página para
-            compartilhar todos os meus conhecimentos em Programação Web e muito
-            mais. Além de temas variados que também me interessam, apresentarei
-            tudo de maneira descontraída e agradável. Aproveite para explorar!
+            compartilhar todos os meus conhecimentos em Programação Web,
+            apresentarei tudo de maneira descontraída e agradável. Aproveite
+            para explorar!
           </p>
         </div>
 
@@ -66,8 +65,6 @@ export default function Home() {
 
         <TopicsNavigation />
       </section>
-
-      <SectionVideosOnTopics />
     </main>
   )
 }
