@@ -37,6 +37,9 @@ export function CardProject({
     }
   }, [previewDesktop, previewMobile])
 
+  console.log(previewDesktop, '==previewDesktop')
+  console.log(previewMobile, '==previewMobile')
+
   return (
     <div className="flex h-[28rem] w-52 flex-col items-center rounded-md p-2 lg:h-[16rem] lg:w-[24rem]">
       <h2>{title}</h2>

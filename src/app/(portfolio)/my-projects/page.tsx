@@ -70,6 +70,7 @@ export default function MyProjects() {
             width={36}
             height={36}
             sizes="100vw"
+            unoptimized
             className="mx-auto h-full w-full rounded-full border-4 border-transparent object-cover"
             src="/gifs/loadings/amoeba.gif"
             alt="Loading animation"
