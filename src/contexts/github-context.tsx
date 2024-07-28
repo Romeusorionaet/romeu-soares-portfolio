@@ -49,7 +49,7 @@ export function GithubContextProvider({
     error: errGithubDataProfile,
   } = useQuery({
     queryKey: ['profile-github'],
-    queryFn: () =>
+    queryFn: async () =>
       apiGithub.get(`/users/Romeusorionaet`).then((response) => response.data),
     staleTime: 86400000, // 24 hours,
   })
