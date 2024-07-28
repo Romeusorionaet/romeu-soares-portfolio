@@ -7,7 +7,7 @@ import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function Home() {
   return (
-    <main className="pb-20">
+    <main>
       <BackgroundOne />
 
       <section className="section_limiter relative flex h-hbp_0 flex-col justify-center gap-4 px-4 lg:h-hbp_2">

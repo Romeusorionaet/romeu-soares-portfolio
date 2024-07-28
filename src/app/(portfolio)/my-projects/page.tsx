@@ -1,25 +1,15 @@
 'use client'
 
-import { db } from '@/lib/firebase-config'
 import { useQuery } from '@tanstack/react-query'
-import { collection, getDocs } from 'firebase/firestore'
 import { useState } from 'react'
 import Image from 'next/image'
-import { CardProject } from './components/card-project.tsx'
-import { GetTranslateValue } from './helpers/get-translate-value'
+import { CardProject } from './components/card-project'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
 import { filterProjectsByType } from './helpers/filter-projects-by-type'
 import { topicsProjects } from '@/constants/topics-projects'
-
-export interface ProjectsProps {
-  previewDesktop: string
-  previewMobile: string
-  pageURL: string
-  title: string
-  type: string
-  id: string
-}
+import { GetTranslateValue } from './helpers/get-translate-value'
+import { fetchProjects, ProjectsProps } from '@/actions/firebase'
 
 export default function MyProjects() {
   const [targetProject, setTargetProject] = useState(topicsProjects.PERSONAL)
@@ -32,13 +22,7 @@ export default function MyProjects() {
     error,
   } = useQuery<ProjectsProps[]>({
     queryKey: ['my-projects'],
-    queryFn: async () => {
-      const querySnapshot = await getDocs(collection(db, 'projects'))
-      return querySnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as ProjectsProps[]
-    },
+    queryFn: async () => await fetchProjects(),
     staleTime: 86400000, // 24 hours
   })
 
@@ -52,6 +36,10 @@ export default function MyProjects() {
 
   if (error || !projects) {
     return <NoDataMessageError />
+  }
+
+  if (projects.length === 0) {
+    return <p className="pt-40 text-center opacity-80">Sem projetos.</p>
   }
 
   const projectsPersonal = filterProjectsByType(

@@ -40,52 +40,15 @@ export function HeaderBlog() {
           Portfólio
         </Link>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <nav>
           <DropdownMenu>
-=======
-        <nav
-          onMouseEnter={() => setMenuOpen(true)}
-          onMouseLeave={() => setMenuOpen(false)}
-        >
-          <DropdownMenu open={menuOpen}>
->>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
-=======
-        <nav>
-          <DropdownMenu>
->>>>>>> ead0990 (fixed value css from layouts)
             <DropdownMenuTrigger className="flex items-center hover:scale-105">
               <span>Outros Blogs</span> <ChevronDown />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-100">
-              <DropdownMenuLabel>Temas</DropdownMenuLabel>
+              <DropdownMenuLabel>Outros temas em produção</DropdownMenuLabel>
               <DropdownMenuSeparator />
-<<<<<<< HEAD
-              <ul>
-                <li>
-                  <DropdownMenuItem>Progromação</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Livros</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Filmes e series</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
-                </li>
-                <li>
-                  <DropdownMenuItem>Ufologia</DropdownMenuItem>
-                </li>
-              </ul>
->>>>>>> fdb0f7d (chore: open component dropMenu when hovered)
-=======
-              <DropdownMenuItem>Tecnologia</DropdownMenuItem>
-              <DropdownMenuItem>Livros</DropdownMenuItem>
-              <DropdownMenuItem>Filmes e series</DropdownMenuItem>
-              <DropdownMenuItem>Astronomia / Astrologia</DropdownMenuItem>
-              <DropdownMenuItem>Ufologia</DropdownMenuItem>
+              <DropdownMenuItem>Progromação</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
