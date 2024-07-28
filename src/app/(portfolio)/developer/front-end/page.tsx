@@ -9,10 +9,12 @@ import tools from '@/assets/img/others/tools.png'
 import html from '@/assets/img/stacks/front-end/htmlLogo.png'
 import Image from 'next/image'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 export default function FrontEnd() {
   return (
-    <main className="relative overflow-hidden px-4">
+    <main className="relative overflow-hidden px-4 pb-28">
       {Array.from({ length: 10 }).map((_, index) => (
         <MovingBackgroundBalls key={index} />
       ))}
@@ -498,6 +500,16 @@ export default function FrontEnd() {
             <li>Experiência com ferramentas como ESLint, Prettier.</li>
           </ul>
         </div>
+      </section>
+
+      <section className="section_limiter flex items-center justify-end gap-2">
+        <Link
+          className="rounded-md p-1 no-underline duration-500 hover:scale-105"
+          href={'/developer/back-end'}
+        >
+          Conhecimentos em Back-end
+        </Link>
+        <ArrowRight />
       </section>
     </main>
   )
