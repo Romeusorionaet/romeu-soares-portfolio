@@ -8,6 +8,7 @@ export interface ProjectsProps {
   previewMobile: string
   pageURL: string
   title: string
+  description: string
   type: string
   id: string
 }

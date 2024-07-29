@@ -8,6 +8,7 @@ interface ProjectsProps {
   previewMobile: string
   pageURL: string
   title: string
+  description: string
 }
 
 export function CardProject({
@@ -15,8 +16,10 @@ export function CardProject({
   previewMobile,
   pageURL,
   title,
+  description,
 }: ProjectsProps) {
   const [preview, setPreview] = useState('')
+  const [showDescription, setShowDescription] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,30 +40,50 @@ export function CardProject({
     }
   }, [previewDesktop, previewMobile])
 
-  console.log(previewDesktop, '==previewDesktop')
-  console.log(previewMobile, '==previewMobile')
+  const handleShowDescription = () => {
+    if (showDescription === true) {
+      setShowDescription(false)
+    } else {
+      setShowDescription(true)
+    }
+  }
+
+  const contentBtn = showDescription ? 'Fechar' : 'Descrição'
 
   return (
-    <div className="flex h-[28rem] w-52 flex-col items-center rounded-md p-2 lg:h-[16rem] lg:w-[24rem]">
-      <h2>{title}</h2>
+    <div className="flex h-[30rem] w-[20rem] flex-col justify-between gap-2 rounded-md lg:h-[16rem] lg:w-[24rem]">
+      <div className="relative h-[26rem] w-full overflow-hidden">
+        <h2 className="mb-2 text-center font-bold">{title}</h2>
 
-      <a
-        href={pageURL}
-        target="_blank"
-        className="h-full w-full duration-700"
-        rel="noreferrer"
+        <a href={pageURL} target="_blank" rel="noreferrer">
+          {preview && (
+            <Image
+              width={36}
+              height={36}
+              sizes="100vw"
+              className="mx-auto h-full w-full rounded-md object-cover"
+              src={preview}
+              alt={`Preview of ${title}`}
+            />
+          )}
+        </a>
+
+        <div
+          data-value={showDescription}
+          className="absolute top-0 hidden h-full data-[value=true]:flex"
+        >
+          <div className="flex h-full items-center">
+            <p className="bg-background p-2 text-justify">{description}</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        onClick={handleShowDescription}
+        className="z-10 w-24 rounded-md border bg-dark-1/50 p-1 hover:scale-105"
       >
-        {preview && (
-          <Image
-            width={36}
-            height={36}
-            sizes="100vw"
-            className="mx-auto h-full w-full rounded-md border-4 border-transparent object-contain"
-            src={preview}
-            alt={`Preview of ${title}`}
-          />
-        )}
-      </a>
+        {contentBtn}
+      </button>
     </div>
   )
 }
