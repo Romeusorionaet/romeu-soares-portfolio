@@ -23,7 +23,7 @@ export default function About() {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="mx-auto space-y-4 lg:w-1/2">
           <p>
             Meu nome é <strong>Romeu Soares</strong>, tenho 25 anos e sou
             <strong> Programador Web</strong>. Estou sempre em busca de novas
@@ -34,7 +34,7 @@ export default function About() {
             atualizados nas principais ferramentas do mercado. Iniciei minha
             trajetória com um curso de <strong>Web Design Moderno</strong>, onde
             aprendi os conceitos básicos de <i>HTML, CSS e JavaScript.</i> Em
-            seguida, participei do programa Explorer da renomada empresa de
+            seguida, participei de vários programas da renomada empresa de
             educação em tecnologia,{' '}
             <a href="https://www.rocketseat.com.br/">Rocketseat</a>. Através
             deste programa, pude definir meus objetivos e traçar minha
