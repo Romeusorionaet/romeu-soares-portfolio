@@ -51,19 +51,24 @@ export function CardProject({
   const contentBtn = showDescription ? 'Fechar' : 'Descrição'
 
   return (
-    <div className="flex h-[30rem] w-[20rem] flex-col justify-between gap-2 rounded-md lg:h-[16rem] lg:w-[24rem]">
+    <article className="flex h-[30rem] w-[20rem] flex-col justify-between gap-2 rounded-md lg:h-[16rem] lg:w-[24rem]">
       <div className="relative h-[26rem] w-full overflow-hidden">
         <h2 className="mb-2 text-center font-bold">{title}</h2>
 
-        <a href={pageURL} target="_blank" rel="noreferrer">
+        <a
+          href={pageURL}
+          target="_blank"
+          rel="noreferrer"
+          className="h-[24rem]"
+        >
           {preview && (
             <Image
               width={36}
               height={36}
               sizes="100vw"
-              className="mx-auto h-full w-full rounded-md object-cover"
+              className="mx-auto h-full w-full rounded-md object-fill lg:object-contain"
               src={preview}
-              alt={`Preview of ${title}`}
+              alt={`pré visualização do projeto ${title}`}
             />
           )}
         </a>
@@ -80,10 +85,10 @@ export function CardProject({
 
       <button
         onClick={handleShowDescription}
-        className="z-10 w-24 rounded-md border bg-dark-1/50 p-1 hover:scale-105"
+        className="z-10 w-24 rounded-md bg-dark-1/50 p-1 hover:scale-105 hover:border focus:border"
       >
         {contentBtn}
       </button>
-    </div>
+    </article>
   )
 }
