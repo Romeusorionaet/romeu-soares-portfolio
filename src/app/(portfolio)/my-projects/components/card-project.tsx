@@ -83,12 +83,14 @@ export function CardProject({
         </div>
       </div>
 
-      <button
-        onClick={handleShowDescription}
-        className="z-10 w-24 rounded-md bg-dark-1/50 p-1 hover:scale-105 hover:border focus:border"
-      >
-        {contentBtn}
-      </button>
+      {description && (
+        <button
+          onClick={handleShowDescription}
+          className="z-10 w-24 rounded-md bg-dark-1/50 p-1 hover:scale-105 hover:border focus:border"
+        >
+          {contentBtn}
+        </button>
+      )}
     </article>
   )
 }
