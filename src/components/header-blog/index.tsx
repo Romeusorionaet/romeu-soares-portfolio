@@ -24,7 +24,7 @@ export function HeaderBlog() {
   const colorTitle = SelectColorForEachRoute(pageName)
 
   const titleTranslations: TitleMap = {
-    technology: 'Tecnologia',
+    technology: 'Programação',
   }
 
   const titleTranslated = TranslateTitle(pageName, titleTranslations)
