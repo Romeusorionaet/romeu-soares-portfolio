@@ -30,7 +30,7 @@ interface GithubContextType {
   isLoadingIssues: boolean
   githubDataProfile: GithubDataProps
   githubDataIssues: GithubDataIssueProps[]
-  fetchGithubSearchIssues: (search: string) => void
+  fetchGithubSearchIssues: (search: string) => Promise<void>
 }
 
 interface GithubContextProviderProps {
@@ -71,10 +71,10 @@ export function GithubContextProvider({
     staleTime: 86400000, // 24 hours,
   })
 
-  const fetchGithubSearchIssues = (searchTerm: string) => {
+  const fetchGithubSearchIssues = async (searchTerm: string) => {
     if (searchTerm.trim()) {
       setSearch(searchTerm)
-      refetch()
+      await refetch()
     }
   }
 

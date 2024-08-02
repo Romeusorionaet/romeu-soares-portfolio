@@ -13,7 +13,7 @@ import { NoDataMessageError } from '@/components/messages-errors/no-data-message
 import { Pagination } from '@/utils/pagination'
 import { routes } from '@/constants/route'
 
-export default function Technology() {
+export default function Codev() {
   const [search, setSearch] = useState('')
 
   const {
@@ -32,10 +32,10 @@ export default function Technology() {
     return <NoDataMessageError />
   }
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
 
-    fetchGithubSearchIssues(search)
+    await fetchGithubSearchIssues(search)
   }
 
   return (
@@ -94,11 +94,13 @@ export default function Technology() {
         )}
       </section>
 
-      <ControlButtonsPagination
-        operation={{ prev, next }}
-        currentPage={currentPage}
-        maxPage={maxPage}
-      />
+      {maxPage > 0 && (
+        <ControlButtonsPagination
+          operation={{ prev, next }}
+          currentPage={currentPage}
+          maxPage={maxPage}
+        />
+      )}
     </main>
   )
 }
