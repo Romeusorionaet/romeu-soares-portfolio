@@ -11,6 +11,7 @@ import Image from 'next/image'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { routes } from '@/constants/route'
 
 export default function FrontEnd() {
   const pathUrl = 'technology/details-issue-github'
@@ -522,7 +523,7 @@ export default function FrontEnd() {
       <section className="section_limiter flex items-center justify-end gap-2">
         <Link
           className="rounded-md p-1 no-underline duration-500 hover:scale-105"
-          href={'/developer/back-end'}
+          href={`${routes.developer}/${routes.backEnd}`}
         >
           Conhecimentos em Back-end
         </Link>

@@ -5,6 +5,7 @@ import tools from '@/assets/img/others/tools.png'
 import production from '@/assets/img/others/production.png'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { routes } from '@/constants/route'
 
 export default function BackEnd() {
   return (
@@ -219,7 +220,7 @@ export default function BackEnd() {
       <section className="section_limiter flex items-center justify-end gap-2">
         <Link
           className="rounded-md p-1 no-underline duration-500 hover:scale-105"
-          href={'/developer/front-end'}
+          href={`${routes.developer}/${routes.frontEnd}`}
         >
           Conhecimentos em Front-end
         </Link>

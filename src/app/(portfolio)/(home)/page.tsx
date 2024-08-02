@@ -4,6 +4,7 @@ import { CardsStacksFrontEnd } from '@/components/cards-stacks/cards-stacks-fron
 import Link from 'next/link'
 import { Code2Icon } from 'lucide-react'
 import { TopicsNavigation } from '@/components/topics-navigation'
+import { routes } from '@/constants/route'
 
 export default function Home() {
   return (
@@ -28,8 +29,11 @@ export default function Home() {
         <div className="absolute bottom-4 right-4">
           <div className="group relative flex items-center justify-end gap-1">
             <Code2Icon className="duration-300 group-focus-within:h-6 group-focus-within:w-6 group-hover:h-6 group-hover:w-6 md:h-0 md:w-0" />
-            <Link href="/technology" className="text-base uppercase lg:text-xl">
-              Tecnologia (Blog)
+            <Link
+              href={`${routes.codev}`}
+              className="text-base uppercase lg:text-xl"
+            >
+              codev (blog)
             </Link>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { routes } from '@/constants/route'
 import Link from 'next/link'
 
 export function TopicsNavigation() {
@@ -8,13 +9,13 @@ export function TopicsNavigation() {
       <nav className="flex items-center justify-center gap-4 text-foreground">
         <Link
           className="rounded-md bg-dark-1/50 p-1 no-underline duration-500 hover:scale-105 hover:bg-dark-1 focus:bg-dark-1"
-          href={'/developer/front-end'}
+          href={`${routes.developer}/${routes.frontEnd}`}
         >
           Front-End
         </Link>
         <Link
           className="rounded-md bg-dark-1/50 p-1 no-underline duration-500 hover:scale-105 hover:bg-dark-1 focus:bg-dark-1"
-          href={'/developer/back-end'}
+          href={`${routes.developer}/${routes.backEnd}`}
         >
           Back-End
         </Link>

@@ -19,6 +19,7 @@ import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 import { socialMediaOptions } from '@/constants/social-media-options'
 import { socialLinks } from './social-link'
+import { routes } from '@/constants/route'
 
 export function Header() {
   const [stateEventMouseHover, setStateEventMouseHover] = useState(false)
@@ -64,25 +65,31 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-cyan-50">
               <DropdownMenuSeparator />
-              <Link href="/" className="no-underline">
+              <Link href={`${routes.home}`} className="no-underline">
                 <DropdownMenuItem>Início</DropdownMenuItem>
               </Link>
-              <Link href="/about" className="no-underline">
+              <Link href={`${routes.about}`} className="no-underline">
                 <DropdownMenuItem>Sobre</DropdownMenuItem>
               </Link>
-              <Link href="/my-projects" className="no-underline">
+              <Link href={`${routes.myProjects}`} className="no-underline">
                 <DropdownMenuItem>Projetos</DropdownMenuItem>
               </Link>
-              <Link href="/developer/front-end" className="no-underline">
+              <Link
+                href={`${routes.developer}/${routes.frontEnd}`}
+                className="no-underline"
+              >
                 <DropdownMenuItem>Front-end</DropdownMenuItem>
               </Link>
-              <Link href="/developer/back-end" className="no-underline">
+              <Link
+                href={`${routes.developer}/${routes.backEnd}`}
+                className="no-underline"
+              >
                 <DropdownMenuItem>Back-end</DropdownMenuItem>
               </Link>
-              <Link href="/gear" className="no-underline">
+              <Link href={`${routes.setup}`} className="no-underline">
                 <DropdownMenuItem>Setup</DropdownMenuItem>
               </Link>
-              <Link href="/technology" className="no-underline">
+              <Link href={`${routes.codev}`} className="no-underline">
                 <DropdownMenuItem>Tecnologia (Blog)</DropdownMenuItem>
               </Link>
             </DropdownMenuContent>
