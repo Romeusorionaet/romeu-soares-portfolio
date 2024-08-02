@@ -2,10 +2,10 @@
 
 @layer utilities {
   .scrollbar::-webkit-scrollbar {
-    width: 2px;
+    @apply w-0.5
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: white; 
+    @apply bg-white 
   }
 }

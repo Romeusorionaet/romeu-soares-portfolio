@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Prompt, Slackey } from 'next/font/google'
-import '../assets/styles/global.css'
-import '../assets/styles/scrollbar.css'
+import '@/assets/styles/global.css'
+import '@/assets/styles/scrollbar.css'
+import '@/assets/styles/scrollbar-global.css'
 import ClientProviders from '@/utils/client-providers'
 
 const prompt = Prompt({

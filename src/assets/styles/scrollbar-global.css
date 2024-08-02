@@ -1,0 +1,15 @@
+@tailwind base;
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-2
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-1
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 rounded-full
+  }
+}
