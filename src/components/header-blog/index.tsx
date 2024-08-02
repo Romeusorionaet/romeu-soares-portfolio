@@ -9,34 +9,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { BookOpenText, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { routes } from '@/constants/route'
-import { SelectColorForEachRoute } from '@/utils/select-color-for-each-route'
-import { TitleMap, TranslateTitle } from '@/utils/translate-title'
 
 export function HeaderBlog() {
   const pathname = usePathname()
   const parts = pathname.split('/')
   const pageName = parts[parts.length - 1]
 
-  const isInitialPageBLog = routes.includes(pageName)
-  const colorTitle = SelectColorForEachRoute(pageName)
-
-  const titleTranslations: TitleMap = {
-    technology: 'Programação',
-  }
-
-  const titleTranslated = TranslateTitle(pageName, titleTranslations)
-
-  const title = isInitialPageBLog ? titleTranslated : <BookOpenText size={40} />
-
   return (
     <header className="fixed left-0 z-20 flex w-full flex-col items-center gap-8 border-b border-white/50 bg-background px-4 py-4">
-      <h1 className={`style_title_1 ${colorTitle}`}>{title}</h1>
+      <h1 className="style_title_1 uppercase">{pageName}</h1>
 
       <section className="section_limiter flex gap-8 max-md:justify-center">
-        <Link href="/" className="no-underline hover:scale-105">
+        <Link href={`${routes.home}`} className="no-underline hover:scale-105">
           Portfólio
         </Link>
 
@@ -48,7 +35,7 @@ export function HeaderBlog() {
             <DropdownMenuContent className="bg-cyan-100">
               <DropdownMenuLabel>Outros temas em produção</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Progromação</DropdownMenuItem>
+              <DropdownMenuItem>codev (blog)</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>

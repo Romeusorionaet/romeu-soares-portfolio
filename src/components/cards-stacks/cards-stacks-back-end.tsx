@@ -1,10 +1,10 @@
-import nodejs from '../../assets/img/stacks/back-end/nodejsLogo.svg'
-import prisma from '../../assets/img/stacks/back-end/prismaLogo.svg'
-import postgresql from '../../assets/img/stacks/back-end/postgresqlLogo.png'
-import mysql from '../../assets/img/stacks/back-end/mysqlLogo.png'
-import express from '../../assets/img/stacks/back-end/expressLogo.png'
-import fastify from '../../assets/img/stacks/back-end/fastifyLogo.png'
-import git from '../../assets/img/stacks/back-end/gitLogo.png'
+import nodejs from '@/assets/img/stacks/back-end/nodejsLogo.svg'
+import prisma from '@/assets/img/stacks/back-end/prismaLogo.svg'
+import postgresql from '@/assets/img/stacks/back-end/postgresqlLogo.png'
+import mysql from '@/assets/img/stacks/back-end/mysqlLogo.png'
+import express from '@/assets/img/stacks/back-end/expressLogo.png'
+import fastify from '@/assets/img/stacks/back-end/fastifyLogo.png'
+import git from '@/assets/img/stacks/back-end/gitLogo.png'
 import { CardStack } from './card-stack'
 
 export function CardsStacksBackEnd() {
