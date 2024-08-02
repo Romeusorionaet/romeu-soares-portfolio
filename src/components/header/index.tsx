@@ -8,11 +8,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import socialMedia from '../../assets/img/header-img/social-media.png'
-import github from '../../assets/img/header-img/github.png'
-import instagram from '../../assets/img/header-img/instagram.png'
-import linkedin from '../../assets/img/header-img/linkedin.png'
-import whatsApp from '../../assets/img/header-img/whatsApp.png'
+import socialMedia from '@/assets/img/header-img/social-media.png'
+import github from '@/assets/img/header-img/github.png'
+import instagram from '@/assets/img/header-img/instagram.png'
+import linkedin from '@/assets/img/header-img/linkedin.png'
+import whatsApp from '@/assets/img/header-img/whatsApp.png'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
@@ -73,8 +73,17 @@ export function Header() {
               <Link href="/my-projects" className="no-underline">
                 <DropdownMenuItem>Projetos</DropdownMenuItem>
               </Link>
+              <Link href="/developer/front-end" className="no-underline">
+                <DropdownMenuItem>Front-end</DropdownMenuItem>
+              </Link>
+              <Link href="/developer/back-end" className="no-underline">
+                <DropdownMenuItem>Back-end</DropdownMenuItem>
+              </Link>
               <Link href="/gear" className="no-underline">
                 <DropdownMenuItem>Setup</DropdownMenuItem>
+              </Link>
+              <Link href="/technology" className="no-underline">
+                <DropdownMenuItem>Tecnologia (Blog)</DropdownMenuItem>
               </Link>
             </DropdownMenuContent>
           </DropdownMenu>

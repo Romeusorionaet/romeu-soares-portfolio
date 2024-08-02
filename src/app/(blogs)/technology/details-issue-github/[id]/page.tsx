@@ -17,6 +17,7 @@ import { useQuery } from '@tanstack/react-query'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 import { GithubDataIssueProps } from '@/contexts/github-context'
 import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
+import { nameRepoOfIssue } from '@/constants/name-repo-of-issue'
 
 export default function DetailsIssueGithubBlog() {
   const params = useParams()
@@ -26,10 +27,12 @@ export default function DetailsIssueGithubBlog() {
     isLoading: isLoadingIssueDetails,
     error: errIssueDetails,
   } = useQuery<GithubDataIssueProps>({
-    queryKey: ['github-issue-details'],
+    queryKey: ['github-issue-details', params.id],
     queryFn: () =>
       apiGithub
-        .get(`/repos/Romeusorionaet/MyGithubBlog/issues/${params.id}`)
+        .get(
+          `/repos/Romeusorionaet/${nameRepoOfIssue.myPortfolio}/issues/${params.id}`,
+        )
         .then((response) => response.data),
     staleTime: 86400000, // 24 hours,
   })
@@ -58,7 +61,7 @@ export default function DetailsIssueGithubBlog() {
         </Link>
 
         <a
-          href={`https://github.com/Romeusorionaet/MyGithubBlog/issues/${params.id}`}
+          href={`https://github.com/Romeusorionaet/${nameRepoOfIssue.myPortfolio}/issues/${params.id}`}
           target="blank"
           className="flex items-center gap-2 no-underline"
         >

@@ -76,7 +76,7 @@
       bg-[url('/backgrounds/blocks-github.png')] bg-center
     }
     .markdown li {
-      @apply p-2 bg-white/40 rounded-md text-white/80
+      @apply p-2 bg-background rounded-md text-white/80
     }
     .container_card_project {
       @apply hidden w-full flex-wrap items-center justify-center max-md:flex-col gap-16

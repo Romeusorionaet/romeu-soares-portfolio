@@ -1,5 +1,6 @@
 'use client'
 
+import { nameRepoOfIssue } from '@/constants/name-repo-of-issue'
 import { apiGithub } from '@/lib/api-github'
 import { useQuery } from '@tanstack/react-query'
 import { ReactNode, createContext, useState } from 'react'
@@ -63,7 +64,9 @@ export function GithubContextProvider({
     queryKey: [`issues-github`, search],
     queryFn: () =>
       apiGithub
-        .get(`/search/issues?q=${search}%20repo:Romeusorionaet/MyGithubBlog`)
+        .get(
+          `/search/issues?q=${search}%20repo:Romeusorionaet/${nameRepoOfIssue.myPortfolio}`,
+        )
         .then((response) => response.data.items),
     staleTime: 86400000, // 24 hours,
   })
