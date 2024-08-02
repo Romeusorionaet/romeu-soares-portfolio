@@ -13,6 +13,8 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export default function FrontEnd() {
+  const pathUrl = 'technology/details-issue-github'
+
   return (
     <main className="relative overflow-hidden px-4 pb-28">
       {Array.from({ length: 10 }).map((_, index) => (
@@ -24,8 +26,8 @@ export default function FrontEnd() {
       </h1>
 
       <section className="section_limiter mt-28 flex flex-col gap-6 pb-28">
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">React</h2>
 
             <Image
@@ -36,23 +38,38 @@ export default function FrontEnd() {
               alt="logomarca react"
               className="h-10 w-10 object-cover"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Componentes:</p>
             <ul className="hover_expand_list scrollbar">
-              <li>Função e Classe: Explica os dois tipos de componentes.</li>
               <li>
-                Propriedades (props): Passagem de dados de pai para filho.
-              </li>
-              <li>Ciclo de Vida: Métodos de ciclo de vida do componente.</li>
-              <li>
-                Renderização Condicional: Renderização de componentes baseada em
-                condições.
+                <Link href={`/${pathUrl}/2`}>
+                  Função e Classe: Explica os dois tipos de componentes.
+                </Link>
               </li>
               <li>
-                Composição vs. Herança: Composição combina componentes simples;
-                herança usa classes base para estender funcionalidades.
+                <Link href={`/${pathUrl}/3`}>
+                  Propriedades (props): Passagem de dados de pai para filho.
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${pathUrl}/4`}>
+                  Ciclo de Vida - Métodos de ciclo de vida do componente.
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${pathUrl}/5`}>
+                  Renderização Condicional - Renderização de componentes baseada
+                  em condições.
+                </Link>
+              </li>
+              <li>
+                <Link href={`/${pathUrl}/6`}>
+                  Composição vs. Herança - Composição combina componentes
+                  simples - herança usa classes base para estender
+                  funcionalidades.
+                </Link>
               </li>
             </ul>
           </div>
@@ -196,10 +213,10 @@ export default function FrontEnd() {
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Linguagem de estilo</h2>
 
             <Image
@@ -218,7 +235,7 @@ export default function FrontEnd() {
               alt="logomarca tailwindcss"
               className="h-10 w-10 rounded-full bg-white object-cover"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Estilização:</p>
@@ -245,10 +262,10 @@ export default function FrontEnd() {
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Produção</h2>
 
             <Image
@@ -259,7 +276,7 @@ export default function FrontEnd() {
               alt="icone de produção"
               className="h-10 w-10 rounded-full bg-white object-cover"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Deploy e Build:</p>
@@ -270,10 +287,10 @@ export default function FrontEnd() {
               <li>Ferramentas como Vercel e Netlify</li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Boas práticas de programação</h2>
 
             <Image
@@ -284,7 +301,7 @@ export default function FrontEnd() {
               alt=""
               className="h-10 w-10 rounded-full object-cover"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">Front-end / Back-end:</p>
@@ -337,10 +354,10 @@ export default function FrontEnd() {
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Linguagem de programação</h2>
 
             <Image
@@ -359,7 +376,7 @@ export default function FrontEnd() {
               alt="logomarca typescript"
               className="h-10 w-10 object-cover"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">JavaScript e TypeScript:</p>
@@ -404,10 +421,10 @@ export default function FrontEnd() {
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div>
-          <div className="mb-8 flex items-center gap-2">
+        <article>
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">
               Linguagem de marcação de HiperTexto
             </h2>
@@ -420,7 +437,7 @@ export default function FrontEnd() {
               alt="logomarca html"
               className="h-10 w-10 rounded-full bg-white object-cover p-0.5"
             />
-          </div>
+          </header>
 
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">HTML:</p>
@@ -476,10 +493,10 @@ export default function FrontEnd() {
               </li>
             </ul>
           </div>
-        </div>
+        </article>
 
-        <div tabIndex={0} className="group cursor-pointer focus:p-2">
-          <div className="mb-8 flex items-center gap-2">
+        <article tabIndex={0} className="group cursor-pointer focus:p-2">
+          <header className="mb-8 flex items-center gap-2">
             <h2 className="text-xl font-bold">Ferramentas e Ecossistema</h2>
 
             <Image
@@ -490,7 +507,7 @@ export default function FrontEnd() {
               alt="logomarca html"
               className="h-10 w-10 rounded-full object-cover"
             />
-          </div>
+          </header>
 
           <ul className="hover_expand_list scrollbar">
             <li>
@@ -499,7 +516,7 @@ export default function FrontEnd() {
             </li>
             <li>Experiência com ferramentas como ESLint, Prettier.</li>
           </ul>
-        </div>
+        </article>
       </section>
 
       <section className="section_limiter flex items-center justify-end gap-2">
