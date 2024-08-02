@@ -45,7 +45,7 @@
     p {
       @apply text-mobile md:text-desktop
     }
-    a {
+    a, li > a {
       @apply underline
     }
   }

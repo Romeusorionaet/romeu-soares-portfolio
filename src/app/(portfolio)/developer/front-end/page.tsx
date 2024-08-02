@@ -14,7 +14,7 @@ import { ArrowRight } from 'lucide-react'
 import { routes } from '@/constants/route'
 
 export default function FrontEnd() {
-  const pathUrl = 'technology/details-issue-github'
+  const pathUrl = `${routes.codev}/${routes.detailsIssueGithub}`
 
   return (
     <main className="relative overflow-hidden px-4 pb-28">
@@ -45,17 +45,17 @@ export default function FrontEnd() {
             <p className="font-bold">Componentes:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
-                <Link href={`/${pathUrl}/2`}>
+                <Link href={`${pathUrl}/2`}>
                   Função e Classe: Explica os dois tipos de componentes.
                 </Link>
               </li>
               <li>
-                <Link href={`/${pathUrl}/3`}>
+                <Link href={`${pathUrl}/3`}>
                   Propriedades (props): Passagem de dados de pai para filho.
                 </Link>
               </li>
               <li>
-                <Link href={`/${pathUrl}/4`}>
+                <Link href={`${pathUrl}/4`}>
                   Ciclo de Vida - Métodos de ciclo de vida do componente.
                 </Link>
               </li>
@@ -66,7 +66,7 @@ export default function FrontEnd() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${pathUrl}/6`}>
+                <Link href={`${pathUrl}/6`}>
                   Composição vs. Herança - Composição combina componentes
                   simples - herança usa classes base para estender
                   funcionalidades.
