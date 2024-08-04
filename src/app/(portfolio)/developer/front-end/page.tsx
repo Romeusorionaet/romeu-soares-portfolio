@@ -79,31 +79,52 @@ export default function FrontEnd() {
             <p className="font-bold">Hooks:</p>
             <ul className="hover_expand_list scrollbar scrollbar">
               <li>
-                useState: Gerencia o estado interno de um componente funcional.
+                <Link href={`${pathUrl}/14`}>
+                  useState: Gerencia o estado interno de um componente
+                  funcional.
+                </Link>
               </li>
               <li>
-                useEffect: Executa efeitos colaterais após a renderização do
-                componente.
+                <Link href={`${pathUrl}/10`}>
+                  useEffect: Executa efeitos colaterais após a renderização do
+                  componente.
+                </Link>
               </li>
               <li>
-                useContext: Acessa o valor de um contexto React sem precisar de
-                `props`.
+                <Link href={`${pathUrl}/9`}>
+                  useContext: Acessa o valor de um contexto React sem precisar
+                  de `props`.
+                </Link>
               </li>
               <li>
-                Custom Hooks: Hooks personalizados para reutilizar lógica de
-                componentes.
+                <Link href={`${pathUrl}/7`}>
+                  Custom Hooks: Hooks personalizados para reutilizar lógica de
+                  componentes.
+                </Link>
               </li>
               <li>
-                useMemo: Memoriza valores calculados para evitar recomputações
-                desnecessárias, melhorando a performance.
+                <Link href={`${pathUrl}/11`}>
+                  useMemo: Memoriza valores calculados para evitar recomputações
+                  desnecessárias, melhorando a performance.
+                </Link>
               </li>
               <li>
-                useCallback: Memoriza funções para evitar re-criações
-                desnecessárias.
+                <Link href={`${pathUrl}/8`}>
+                  useCallback: Memoriza funções para evitar re-criações
+                  desnecessárias.
+                </Link>
               </li>
               <li>
-                useRef: Permite a criação de referências mutáveis que persistem
-                entre renderizações.
+                <Link href={`${pathUrl}/13`}>
+                  useRef: Permite a criação de referências mutáveis que
+                  persistem entre renderizações.
+                </Link>
+              </li>
+              <li>
+                <Link href={`${pathUrl}/12`}>
+                  useMutation: Parte da biblioteca react-query e é usado para
+                  lidar com operações que alteram dados
+                </Link>
               </li>
             </ul>
           </div>
