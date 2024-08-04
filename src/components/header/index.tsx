@@ -90,7 +90,7 @@ export function Header() {
                 <DropdownMenuItem>Setup</DropdownMenuItem>
               </Link>
               <Link href={`${routes.codev}`} className="no-underline">
-                <DropdownMenuItem>Tecnologia (Blog)</DropdownMenuItem>
+                <DropdownMenuItem>Codev (Blog)</DropdownMenuItem>
               </Link>
             </DropdownMenuContent>
           </DropdownMenu>
