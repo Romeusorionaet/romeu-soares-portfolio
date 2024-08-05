@@ -135,22 +135,28 @@ export default function FrontEnd() {
           >
             <p className="font-bold">Props & State:</p>
             <ul className="hover_expand_list scrollbar">
-              <li>Props: Dados passados de pai para filho (imutáveis)</li>
               <li>
-                State: Dados gerenciados internamente pelo componente (mutáveis)
+                <Link href={`${pathUrl}/17`}>
+                  Props: Dados passados de pai para filho (imutáveis)
+                </Link>
               </li>
               <li>
-                PropTypes: Validação de props para garantir que recebam tipos
-                corretos
+                <Link href={`${pathUrl}/16`}>
+                  Local vs. Global State: Estado local gerenciado dentro do
+                  componente vs. estado global gerenciado por bibliotecas como
+                  Redux ou Zustand
+                </Link>
               </li>
               <li>
-                Local vs. Global State: Estado local gerenciado dentro do
-                componente vs. estado global gerenciado por bibliotecas como
-                Redux
+                <Link href={`${pathUrl}/15`}>
+                  Imutabilidade: Prática de não modificar diretamente os objetos
+                  de estado, mas criar novos
+                </Link>
               </li>
               <li>
-                Imutabilidade: Prática de não modificar diretamente os objetos
-                de estado, mas criar novos
+                <Link href={`${pathUrl}/18`}>
+                  Zustand: Gerenciamento de estado
+                </Link>
               </li>
             </ul>
           </div>
