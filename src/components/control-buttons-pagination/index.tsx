@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowBigLeft, ArrowBigRight } from 'lucide-react'
 
 interface Props {

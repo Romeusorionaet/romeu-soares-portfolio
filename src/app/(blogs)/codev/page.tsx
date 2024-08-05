@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useContext, useState } from 'react'
+import { useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
@@ -12,10 +12,9 @@ import { SkeletonCardsGithub } from './components/skeleton-cards-github'
 import { NoDataMessageError } from '@/components/messages-errors/no-data-message-error'
 import { Pagination } from '@/utils/pagination'
 import { routes } from '@/constants/route'
+import { FormInputSearch } from '@/components/form-input-search'
 
 export default function Codev() {
-  const [search, setSearch] = useState('')
-
   const {
     fetchGithubSearchIssues,
     githubDataIssues,
@@ -32,35 +31,21 @@ export default function Codev() {
     return <NoDataMessageError />
   }
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault()
-
-    await fetchGithubSearchIssues(search)
+  const handleSubmit = async (query: string) => {
+    if (query) {
+      await fetchGithubSearchIssues(query)
+    }
   }
 
   return (
     <main className="pb-8 pt-44">
       <ProfileGithub />
 
-      <form
-        onSubmit={handleSubmit}
-        className="my-16 flex items-center justify-center gap-4 px-4 max-md:flex-col"
-      >
-        <input
-          type="text"
-          placeholder="Buscar conteúdo"
-          onChange={(event) => setSearch(event.target.value)}
-          className="h-10 w-full max-w-[500px] rounded-md p-1 text-dark-1"
-        />
-        <button
-          type="submit"
-          className="h-10 w-20 rounded-md border p-2 text-sm duration-500 hover:text-base"
-        >
-          Buscar
-        </button>
-      </form>
+      <div className="my-20 px-1">
+        <FormInputSearch handleSubmit={handleSubmit} />
+      </div>
 
-      <section className="flex flex-wrap items-center justify-center gap-8">
+      <section className="mb-16 flex flex-wrap items-center justify-center gap-8">
         {isLoadingIssues ? (
           <SkeletonCardsGithub />
         ) : (

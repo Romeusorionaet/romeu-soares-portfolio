@@ -8,8 +8,7 @@ import {
   MessageCircleMoreIcon,
   User,
 } from 'lucide-react'
-import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { MarkDown } from '@/components/mark-down'
@@ -18,10 +17,10 @@ import { NoDataMessageError } from '@/components/messages-errors/no-data-message
 import { GithubDataIssueProps } from '@/contexts/github-context'
 import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
 import { nameRepoOfIssue } from '@/constants/name-repo-of-issue'
-import { routes } from '@/constants/route'
 
 export default function DetailsIssueGithubBlog() {
   const params = useParams()
+  const router = useRouter()
 
   const {
     data: issueDetails,
@@ -50,16 +49,21 @@ export default function DetailsIssueGithubBlog() {
     return <NoDataMessageError />
   }
 
+  const handleBack = () => {
+    router.back()
+  }
+
   return (
     <main className="section_limiter px-4 pb-8 pt-44">
       <nav className="mb-28 flex justify-between text-sm md:text-base">
-        <Link
-          href={`${routes.codev}`}
+        <a
+          href="#"
+          onClick={handleBack}
           className="flex items-center gap-2 no-underline"
         >
           <ArrowLeft size={20} />
           <span className="uppercase">voltar</span>
-        </Link>
+        </a>
 
         <a
           href={`https://github.com/Romeusorionaet/${nameRepoOfIssue.myPortfolio}/issues/${params.id}`}
