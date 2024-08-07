@@ -15,7 +15,7 @@ export default function Home() {
       <section className="section_limiter relative flex h-hbp_0 flex-col justify-center gap-4 px-4 lg:h-hbp_2">
         <h1 className="style_title_1 max-md:text-center">Programador Web</h1>
 
-        <div className="space-y-4 bg-dark-1/20 md:w-1/2">
+        <div className="space-y-4 md:w-1/2">
           <h2 className="text-lg md:text-xl">
             Me chamo Romeu Soares e sou Programador Web
           </h2>

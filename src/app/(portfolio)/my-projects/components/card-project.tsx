@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 interface ProjectsProps {
   previewDesktop: string
@@ -18,27 +19,7 @@ export function CardProject({
   title,
   description,
 }: ProjectsProps) {
-  const [preview, setPreview] = useState('')
   const [showDescription, setShowDescription] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth
-      if (width > 1024) {
-        setPreview(previewDesktop)
-      } else {
-        setPreview(previewMobile)
-      }
-    }
-
-    handleResize()
-
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [previewDesktop, previewMobile])
 
   const handleShowDescription = () => {
     if (showDescription === true) {
@@ -51,27 +32,58 @@ export function CardProject({
   const contentBtn = showDescription ? 'Fechar' : 'Descrição'
 
   return (
-    <article className="flex h-[30rem] w-[20rem] flex-col justify-between gap-2 rounded-md lg:h-[16rem] lg:w-[24rem]">
+    <article className="h-[30rem] w-[20rem] rounded-md">
       <div className="relative h-[26rem] w-full overflow-hidden">
-        <h2 className="mb-2 text-center font-bold">{title}</h2>
-
-        <a
-          href={pageURL}
-          target="_blank"
-          rel="noreferrer"
-          className="h-[24rem]"
-        >
-          {preview && (
-            <Image
-              width={36}
-              height={36}
-              sizes="100vw"
-              className="mx-auto h-full w-full rounded-md object-fill lg:object-contain"
-              src={preview}
-              alt={`pré visualização do projeto ${title}`}
-            />
-          )}
+        <a href={pageURL} target="_blank" rel="noreferrer">
+          <h2 className="mb-4 text-center font-bold hover:scale-105">
+            {title}
+          </h2>
         </a>
+
+        <div className="relative">
+          <Image
+            width={36}
+            height={36}
+            sizes="100vw"
+            className="absolute -top-4 left-0 -z-10 h-[226px] w-full"
+            src="/backgrounds/notebook.png"
+            alt=""
+          />
+
+          <div className="mx-auto h-[128px] w-[198px]">
+            {previewDesktop ? (
+              <Image
+                width={36}
+                height={36}
+                sizes="100vw"
+                className="h-full w-full rounded-md object-cover"
+                src={previewDesktop}
+                alt={`pré visualização do projeto ${title}`}
+              />
+            ) : (
+              <div className="pt-10 text-center">
+                <ClipLoader color="#000" size={35} />
+              </div>
+            )}
+          </div>
+
+          <div className="h-[12rem] w-[8rem] rounded-md border-8 border-black bg-white">
+            {previewMobile ? (
+              <Image
+                width={36}
+                height={36}
+                sizes="100vw"
+                className="mx-auto h-full w-full object-cover"
+                src={previewMobile}
+                alt={`pré visualização do projeto ${title}`}
+              />
+            ) : (
+              <div className="pt-16 text-center">
+                <ClipLoader color="#000" size={35} />
+              </div>
+            )}
+          </div>
+        </div>
 
         <div
           data-value={showDescription}

@@ -17,7 +17,7 @@ export function BackgroundWebDeveloper() {
         sizes="100vw"
         src="/backgrounds/code.png"
         alt=""
-        className="absolute left-10 top-10 md:h-28 md:w-28 xl:left-20 xl:top-28"
+        className="absolute left-10 top-10 opacity-50 md:h-28 md:w-28 xl:left-20 xl:top-28"
       />
     </div>
   )

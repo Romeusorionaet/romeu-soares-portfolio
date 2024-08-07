@@ -56,7 +56,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed left-0 z-20 flex w-full items-center justify-between bg-background px-4 pb-4 pt-10">
+    <header className="fixed left-0 z-20 flex h-20 w-full items-center justify-between bg-background px-4 pb-4 pt-10">
       <section className="section_limiter flex justify-between">
         <nav>
           <DropdownMenu>

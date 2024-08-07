@@ -10,6 +10,7 @@ import { filterProjectsByType } from './helpers/filter-projects-by-type'
 import { topicsProjects } from '@/constants/topics-projects'
 import { GetTranslateValue } from './helpers/get-translate-value'
 import { fetchProjects, ProjectsProps } from '@/actions/firebase'
+import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function MyProjects() {
   const [targetProject, setTargetProject] = useState(topicsProjects.PERSONAL)
@@ -59,10 +60,14 @@ export default function MyProjects() {
   }
 
   return (
-    <main className="pb-28 pt-40">
+    <main className="overflow-hidden px-4 pb-28 pt-40">
       <h1 className="style_title_1 text-center">Meus projetos web</h1>
 
-      <section className="section_limiter relative mt-28 px-4">
+      <section className="section_limiter relative mt-28 rounded-full bg-white/90 px-4 text-dark-1">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <MovingBackgroundBalls key={index} />
+        ))}
+
         <div
           className={`absolute -top-10 -z-10 h-16 w-20 transition-transform duration-300 ${targetProjectOfList}`}
         >
@@ -99,7 +104,7 @@ export default function MyProjects() {
         </ul>
       </section>
 
-      <section className="section_limiter mt-16 flex flex-wrap px-4">
+      <section className="section_limiter top-0 mt-16 flex flex-wrap px-4">
         <div
           data-value={targetProject}
           className="container_card_project data-[value=personal]:flex"
