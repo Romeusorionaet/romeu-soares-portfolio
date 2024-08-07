@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext } from 'react'
+import { Suspense, useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
@@ -41,9 +41,11 @@ export default function Codev() {
     <main className="pb-8 pt-44">
       <ProfileGithub />
 
-      <div className="my-20 px-1">
-        <FormInputSearch handleSubmit={handleSubmit} />
-      </div>
+      <Suspense fallback={null}>
+        <div className="my-20 px-1">
+          <FormInputSearch handleSubmit={handleSubmit} />
+        </div>
+      </Suspense>
 
       <section className="mb-16 flex flex-wrap items-center justify-center gap-8">
         {isLoadingIssues ? (
