@@ -153,11 +153,6 @@ export default function FrontEnd() {
                   de estado, mas criar novos
                 </Link>
               </li>
-              <li>
-                <Link href={`${pathUrl}/18`}>
-                  Zustand: Gerenciamento de estado
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -165,10 +160,16 @@ export default function FrontEnd() {
             <p className="font-bold">Gerenciamento de Estado:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
-                React Context: Compartilhamento de estado entre componentes sem
-                prop drilling
+                <Link href={`${pathUrl}/19`}>
+                  React Context: Compartilhamento de estado entre componentes
+                  sem prop drilling
+                </Link>
               </li>
-              <li>Zustand: Biblioteca de estado leve e sem boilerplate</li>
+              <li>
+                <Link href={`${pathUrl}/18`}>
+                  Zustand: Gerenciamento de estado
+                </Link>
+              </li>
             </ul>
           </div>
 
