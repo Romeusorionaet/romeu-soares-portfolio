@@ -56,7 +56,7 @@ export function CardProject({
                 width={36}
                 height={36}
                 sizes="100vw"
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-fill"
                 src={previewDesktop}
                 alt={`pré visualização do projeto ${title}`}
               />
@@ -73,7 +73,7 @@ export function CardProject({
                 width={36}
                 height={36}
                 sizes="100vw"
-                className="mx-auto h-full w-full object-cover"
+                className="mx-auto h-full w-full object-fill"
                 src={previewMobile}
                 alt={`pré visualização do projeto ${title}`}
               />
