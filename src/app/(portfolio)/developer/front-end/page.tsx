@@ -176,24 +176,22 @@ export default function FrontEnd() {
           <div tabIndex={0} className="group cursor-pointer focus:p-2">
             <p className="font-bold">React Router:</p>
             <ul className="hover_expand_list scrollbar">
-              <li>Navegação e roteamento em aplicações React</li>
-              <li>Criação de rotas dinâmicas e aninhadas</li>
               <li>
-                Rotas protegidas: Implementação de proteção de rotas baseada em
-                autenticação
+                <Link href={`${pathUrl}/22`}>
+                  Parâmetros de URL: Extração e uso de parâmetros da URL
+                </Link>
               </li>
               <li>
-                Programmatic navigation: Navegação programática usando
-                `navigate` ou `history`
-              </li>
-              <li>Parâmetros de URL: Extração e uso de parâmetros da URL</li>
-              <li>
-                Lazy loading de rotas: Carregamento sob demanda de componentes
-                de rota para otimizar o desempenho
+                <Link href={`${pathUrl}/21`}>
+                  Lazy loading de rotas: Carregamento sob demanda de componentes
+                  de rota para otimizar o desempenho
+                </Link>
               </li>
               <li>
-                Contexto de roteamento: Utilização do contexto do roteador para
-                acessar informações de roteamento em qualquer componente
+                <Link href={`${pathUrl}/20`}>
+                  Contexto de roteamento: Utilização do contexto do roteador
+                  para acessar informações de roteamento em qualquer componente
+                </Link>
               </li>
             </ul>
           </div>
@@ -210,16 +208,8 @@ export default function FrontEnd() {
                 tipos de dados
               </li>
               <li>
-                React Hook Form: Biblioteca para gerenciamento e validação de
-                formulários com performance otimizada
-              </li>
-              <li>
                 Controle de erros: Estratégias para exibir mensagens de erro e
                 feedback ao usuário
-              </li>
-              <li>
-                Formulários dinâmicos: Criação de formulários que se adaptam com
-                base em dados ou interação do usuário
               </li>
             </ul>
           </div>
