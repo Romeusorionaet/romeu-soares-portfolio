@@ -200,16 +200,16 @@ export default function FrontEnd() {
             <p className="font-bold">Formulários:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
-                Gerenciamento de formulários: Controle do estado e lógica dos
-                formulários
+                <Link href={`${pathUrl}/23`}>
+                  Gerenciamento de formulários: Controle do estado e lógica dos
+                  formulários
+                </Link>
               </li>
               <li>
-                Zod para validação: Biblioteca para validação de esquemas e
-                tipos de dados
-              </li>
-              <li>
-                Controle de erros: Estratégias para exibir mensagens de erro e
-                feedback ao usuário
+                <Link href={`${pathUrl}/24`}>
+                  Zod para validação: Biblioteca para validação de esquemas,
+                  tipos de dados e controle de erros
+                </Link>
               </li>
             </ul>
           </div>
@@ -218,17 +218,17 @@ export default function FrontEnd() {
             <p className="font-bold">Integração com APIs:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
-                Fetch API: Interface nativa do navegador para fazer requisições
-                HTTP de forma simples e direta.
+                <Link href={`${pathUrl}/25`}>
+                  Axios: Biblioteca popular para fazer requisições HTTP, com
+                  suporte a interceptadores e configuração fácil.
+                </Link>
               </li>
               <li>
-                Axios: Biblioteca popular para fazer requisições HTTP, com
-                suporte a interceptadores e configuração fácil.
-              </li>
-              <li>
-                React Query: Biblioteca para gerenciamento e sincronização de
-                dados com suporte a caching, background updates e query
-                invalidation.
+                <Link href={`${pathUrl}/1`}>
+                  React Query - Biblioteca para gerenciamento e sincronização de
+                  dados com suporte a caching, background updates e query
+                  invalidation.
+                </Link>
               </li>
             </ul>
           </div>
