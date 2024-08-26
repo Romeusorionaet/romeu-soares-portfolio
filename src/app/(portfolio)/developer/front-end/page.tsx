@@ -260,24 +260,34 @@ export default function FrontEnd() {
             <p className="font-bold">Estilização:</p>
             <ul className="hover_expand_list scrollbar">
               <li>
-                CSS-in-JS Styled-components: Biblioteca que permite escrever CSS
-                dentro de arquivos JavaScript/TypeScript
+                <Link href={`${pathUrl}/27`}>
+                  CSS-in-JS Styled-components: Biblioteca que permite escrever
+                  CSS dentro de arquivos JavaScript/TypeScript
+                </Link>
               </li>
               <li>
-                Framework CSS TailwindCSS: Framework utilitário para estilização
-                rápida e responsiva
+                <Link href={`${pathUrl}/28`}>
+                  Framework CSS TailwindCSS: Framework utilitário para
+                  estilização rápida e responsiva
+                </Link>
               </li>
               <li>
-                CSS Modules: Estilização modular onde cada componente tem seu
-                próprio arquivo CSS, evitando conflitos de nomes
+                <Link href={`${pathUrl}/26`}>
+                  CSS Modules: Estilização modular onde cada componente tem seu
+                  próprio arquivo CSS, evitando conflitos de nomes
+                </Link>
               </li>
               <li>
-                SCSS/Sass: Pré-processador CSS que adiciona funcionalidades como
-                variáveis e aninhamento
+                <Link href={`${pathUrl}/30`}>
+                  SCSS/Sass: Pré-processador CSS que adiciona funcionalidades
+                  como variáveis e aninhamento
+                </Link>
               </li>
               <li>
-                PostCSS: Ferramenta para transformar CSS com plugins, como
-                autoprefixer e minificação
+                <Link href={`${pathUrl}/29`}>
+                  PostCSS: Ferramenta para transformar CSS com plugins, como
+                  autoprefixer e minificação
+                </Link>
               </li>
             </ul>
           </div>
