@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import bg1 from '../../assets/img/backgrounds-img/bg-1.png'
 
 export function BackgroundOne() {
   return (
@@ -9,7 +8,7 @@ export function BackgroundOne() {
         height={36}
         sizes="100vw"
         className="h-full w-full"
-        src={bg1}
+        src="/backgrounds/rocket-rising.png"
         alt=""
       />
     </div>

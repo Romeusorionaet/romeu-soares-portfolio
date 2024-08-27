@@ -28,7 +28,7 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-24 right-4 md:bottom-40">
-          <div className="group relative flex items-center justify-end gap-1">
+          <div className="group relative flex items-center justify-end gap-1 rounded-md border border-white p-2">
             <Code2Icon className="duration-300 group-focus-within:h-6 group-focus-within:w-6 group-hover:h-6 group-hover:w-6 md:h-0 md:w-0" />
             <Link
               href={`${routes.codev}`}
@@ -42,7 +42,7 @@ export default function Home() {
 
       <BackgroundWebDeveloper />
 
-      <section className="w-full bg-white px-4 pb-4 text-dark-1">
+      <section className="w-full bg-white bg-[url('/backgrounds/pyramids.png')] bg-contain bg-bottom bg-no-repeat px-4 pb-4 text-dark-1 lg:bg-cover">
         <div className="section_limiter -mt-1 lg:-mt-24">
           <h2 className="mb-4 text-4xl font-bold">Programação Web</h2>
 
