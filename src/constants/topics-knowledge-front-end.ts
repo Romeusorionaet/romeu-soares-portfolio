@@ -1,0 +1,15 @@
+export const topicsKnowledgeFrontEnd = {
+  COMPONENTS: 'Components',
+  HOOKS: 'Hooks',
+  PROPS_STATE: 'Props & State',
+  STATE_MANAGER: 'Gerenciamento de Estado',
+  REACT_ROUTER: 'React Router',
+  FORMS: 'Formulários',
+  API_INTEGRATOR: 'Integração com APIs',
+  STYLIZATION: 'Estelização',
+  DEPLOY_BUILD: 'Deploy e Build',
+  HTML: 'HTML',
+  TOOLS_ECOSYSTEM: 'Ferramentas e Ecossistema',
+  FRONT_BACK: 'Front-end / Back-end',
+  JAVASCRIPT_TYPESCRIPT: 'Javascript / Typescript',
+}

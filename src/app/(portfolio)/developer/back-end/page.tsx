@@ -12,8 +12,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function BackEnd() {
@@ -33,7 +33,7 @@ export default function BackEnd() {
         Meus conhecimentos como programador Back-End
       </h1>
 
-      <section className="mt-28 flex gap-2 pb-28 max-md:flex-col">
+      <section className="section_limiter mt-28 flex gap-2 pb-28 max-md:flex-col">
         <section className="w-full justify-between border-white max-md:flex md:w-56 md:border-r">
           <div className="mb-8 flex items-center justify-center gap-2">
             <h2 className="text-xl font-bold">Nodejs</h2>
