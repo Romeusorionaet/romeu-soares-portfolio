@@ -81,4 +81,7 @@
     .container_card_project {
       @apply hidden w-full flex-wrap items-center justify-center max-md:flex-col gap-16
     }
+    #sectionContentList > ul {
+      @apply flex flex-col gap-4 data-[value=false]:hidden
+    }
   } 
