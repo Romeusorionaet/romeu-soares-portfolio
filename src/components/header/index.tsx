@@ -114,10 +114,11 @@ export function Header() {
                 <DropdownMenuSeparator />
                 {socialLinks.map((social) => (
                   <a
-                    key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
+                    key={social.name}
+                    aria-label={`Link to ${social.name}`}
                     className="no-underline"
                   >
                     <DropdownMenuItem>{social.name}</DropdownMenuItem>
@@ -137,9 +138,10 @@ export function Header() {
                 onBlur={handleMouseLeave}
               >
                 <a
-                  href={social.href}
                   target="_blank"
                   rel="noreferrer"
+                  key={social.name}
+                  aria-label={`Link to ${social.name}`}
                   className="no-underline"
                 >
                   {social.name}

@@ -288,9 +288,9 @@ export default function FrontEnd() {
 
           <ul data-value={topic === topicsKnowledgeFrontEnd.DEPLOY_BUILD}>
             <li>
-              Entendimento de como fazer build e deploy de aplicações React
+              Entendimento de como fazer build e deploy de aplicações React com
+              Nextjs
             </li>
-            <li>Ferramentas como Vercel e Netlify</li>
           </ul>
 
           <ul data-value={topic === topicsKnowledgeFrontEnd.FRONT_BACK}>
@@ -299,8 +299,10 @@ export default function FrontEnd() {
               componentes
             </li>
             <li>
-              Divisão de Responsabilidades: Single Responsibility Principle
-              (SRP)
+              <Link href={`${pathUrl}/31`}>
+                Divisão de Responsabilidades: Single Responsibility Principle
+                (SRP)
+              </Link>
             </li>
             <li>
               Testes: Escrevo testes End-2-End e unitários com Vitest, Cypress e
@@ -313,20 +315,23 @@ export default function FrontEnd() {
             </li>
             <li>
               Acessibilidade: Garantir que os componentes e aplicações sejam
-              acessíveis para todos os usuários, incluindo aqueles com
-              deficiências, através do uso de práticas como ARIA roles e
-              propriedades.
+              acessíveis para todos os usuários.
             </li>
             <li>
-              SOLID: Conjunto de princípios para design de software que promove
-              a criação de sistemas modulares e de fácil manutenção. Inclui
-              Princípio da Responsabilidade Única, Princípio da Abstração, e
-              outros.
+              <Link href={`${pathUrl}/33`}>
+                SOLID: Conjunto de princípios para design de software que
+                promove a criação de sistemas modulares e de fácil manutenção.
+                Inclui Princípio da Responsabilidade Única, Princípio da
+                Abstração, e outros.
+              </Link>
             </li>
             <li>
-              DDD (Domain-Driven Design): Abordagem de design de software focada
-              na modelagem do domínio de negócio e na criação de uma linguagem
-              comum entre desenvolvedores e especialistas do domínio.
+              <Link href={`${pathUrl}/32`}>
+                DDD (Domain-Driven Design): Abordagem de design de software
+                focada na modelagem do domínio de negócio e na criação de uma
+                linguagem comum entre desenvolvedores e especialistas do
+                domínio.
+              </Link>
             </li>
             <li>
               Clean Architecture: Estrutura arquitetural que enfatiza a
@@ -436,8 +441,10 @@ export default function FrontEnd() {
 
           <ul data-value={topic === topicsKnowledgeFrontEnd.TOOLS_ECOSYSTEM}>
             <li>
-              Next.js: Framework para renderização do lado do servidor e geração
-              de sites estáticos
+              <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+                Next.js: Framework para renderização do lado do servidor e
+                geração de sites estáticos
+              </a>
             </li>
             <li>Experiência com ferramentas como ESLint, Prettier.</li>
           </ul>

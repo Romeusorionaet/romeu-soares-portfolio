@@ -35,7 +35,9 @@ export function HeaderBlog() {
             <DropdownMenuContent className="bg-cyan-100">
               <DropdownMenuLabel>Outros temas em produção</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>codev (blog)</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href={`${routes.codev}`}>codev (blog)</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
