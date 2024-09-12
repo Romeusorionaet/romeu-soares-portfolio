@@ -142,6 +142,7 @@ export function Header() {
                   rel="noreferrer"
                   key={social.name}
                   aria-label={`Link to ${social.name}`}
+                  href={social.href}
                   className="no-underline"
                 >
                   {social.name}
