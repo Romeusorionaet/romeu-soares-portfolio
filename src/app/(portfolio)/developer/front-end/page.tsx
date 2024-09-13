@@ -447,6 +447,16 @@ export default function FrontEnd() {
               </a>
             </li>
             <li>Experiência com ferramentas como ESLint, Prettier.</li>
+            <li>
+              familiaridade com a metodologia ágil Scrum{' '}
+              <a
+                href="/scrum.docx"
+                download="scrum.docx"
+                aria-label="Baixar projeto scrum em DCOX"
+              >
+                Baixar portfólio SCRUM
+              </a>
+            </li>
           </ul>
         </section>
       </section>

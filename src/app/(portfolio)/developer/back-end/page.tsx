@@ -172,11 +172,6 @@ export default function BackEnd() {
             <li>Supabase para hospedagem de banco de dados</li>
           </ul>
 
-          <ul data-value={topic === topicsKnowledgeBackEnd.FRAMEWORKS}>
-            <li>Fastify</li>
-            <li>Express</li>
-          </ul>
-
           <ul data-value={topic === topicsKnowledgeBackEnd.VERSION_CONTROL}>
             <li>
               Git: Sistema de controle de versão para gerenciamento de

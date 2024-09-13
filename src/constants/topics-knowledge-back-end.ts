@@ -6,6 +6,5 @@ export const topicsKnowledgeBackEnd = {
   CACHING: 'Caching',
   DATABASE_ORM: 'Banco de dados e ORM',
   DEPLOY_BUILD: 'Deploy e Build',
-  FRAMEWORKS: 'Frameworks',
   VERSION_CONTROL: 'Controle de versionamento',
 }
