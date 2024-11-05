@@ -25,19 +25,24 @@ export default function About() {
 
         <div className="mx-auto space-y-4 lg:w-1/2">
           <p>
-            Meu nome é <strong>Romeu Soares</strong>, tenho 25 anos e sou
+            Meu nome é <strong>Romeu Soares</strong>, tenho 26 anos e sou
             <strong> Programador Web</strong>. Estou sempre em busca de novas
             oportunidades para aprender e crescer nesta área.
           </p>
           <p>
             Ao longo da minha jornada, adquiri conhecimentos sólidos e
             atualizados nas principais ferramentas do mercado. Iniciei minha
-            trajetória com um curso de <strong>Web Design Moderno</strong>, onde
-            aprendi os conceitos básicos de <i>HTML, CSS e JavaScript.</i> Em
-            seguida, participei de vários programas da renomada empresa de
-            educação em tecnologia,{' '}
-            <a href="https://www.rocketseat.com.br/">Rocketseat</a>. Através
-            deste programa, pude definir meus objetivos e traçar minha
+            trajetória com um curso de <strong>Web Design Moderno</strong> em
+            2022, onde aprendi os conceitos básicos de{' '}
+            <i>HTML, CSS e JavaScript.</i> Em seguida, participei de vários
+            programas da renomada empresa de educação em tecnologia,{' '}
+            <a
+              href="https://www.rocketseat.com.br/"
+              className="text-blue-400 underline"
+            >
+              Rocketseat
+            </a>
+            . Através deste programa, pude definir meus objetivos e traçar minha
             trajetória de forma estruturada.
           </p>
           <p>
@@ -58,9 +63,9 @@ export default function About() {
             ainda mais meus conhecimentos.
           </p>
           <p>
-            Se você procura um <strong>Programador Frontend</strong> apaixonado,
-            dedicado e sempre disposto a aprender, estou pronto para contribuir
-            com seu projeto e fazer a diferença.
+            Se você procura um <strong>Programador</strong> dedicado e sempre
+            disposto a aprender, estou pronto para contribuir com seu projeto e
+            fazer a diferença.
           </p>
         </div>
       </section>

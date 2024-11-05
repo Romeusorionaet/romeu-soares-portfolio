@@ -7,8 +7,8 @@ export function BackgroundOne() {
         width={36}
         height={36}
         sizes="100vw"
-        className="h-full w-full"
-        src="/backgrounds/rocket-rising.png"
+        className="h-full w-full max-md:object-cover"
+        src="/backgrounds/pyramids-and-moon.jpg"
         alt=""
       />
     </div>

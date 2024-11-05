@@ -19,6 +19,8 @@ import { MovingBackgroundBalls } from '@/components/moving-card/moving-backgroun
 export default function BackEnd() {
   const [topic, setTopic] = useState(topicsKnowledgeBackEnd.TEST)
 
+  const pathUrl = `${routes.codev}/${routes.detailsIssueGithub}`
+
   const handleShowTopic = (value: string) => {
     setTopic(value)
   }
@@ -157,6 +159,9 @@ export default function BackEnd() {
             <li>
               Prisma: ORM para Node.js que facilita a interação com bancos de
               dados relacionais.
+            </li>
+            <li>
+              <Link href={`${pathUrl}/35`}>Mapa relacional de Banco</Link>
             </li>
           </ul>
 
