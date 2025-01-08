@@ -34,19 +34,19 @@ export default function About() {
             atualizados nas principais ferramentas do mercado. Iniciei minha
             trajetória com um curso de <strong>Web Design Moderno</strong> em
             2022, onde aprendi os conceitos básicos de{' '}
-            <i>HTML, CSS e JavaScript.</i> Em seguida, participei de vários
-            programas da renomada empresa de educação em tecnologia,{' '}
+            <i>HTML, CSS e JavaScript.</i> Em seguida, me especializei por meio
+            dos cursos da renomada empresa de educação em tecnologia,{' '}
             <a
               href="https://www.rocketseat.com.br/"
               className="text-blue-400 underline"
             >
-              Rocketseat
+              Rocketseat.
             </a>
-            . Através deste programa, pude definir meus objetivos e traçar minha
-            trajetória de forma estruturada.
+            . Então pude definir meus objetivos e traçar minha trajetória de
+            forma estruturada.
           </p>
           <p>
-            Durante o programa, aprofundei meus conhecimentos nos conceitos
+            Durante o curso, aprofundei meus conhecimentos nos conceitos
             fundamentais e fui capaz de realizar projetos mais complexos.
             Adquiri habilidades em montar e consumir{' '}
             <strong>APIs RESTful</strong>, além de trabalhar com bancos de dados
@@ -55,12 +55,23 @@ export default function About() {
           <p>
             Tive também a oportunidade de simular cenários reais de mercado,
             encontrando soluções eficientes e aprendendo a utilizar ferramentas
-            atualizadas, como <i>TypeScript, Next.js e Tailwindcss. </i>
+            atualizadas, como <i>TypeScript, Next.js e Tailwindcss </i>{' '}
+            ferramentas essas na qual hoje domino muito bem.
           </p>
           <p>
             Atualmente estou cursando faculdade de{' '}
             <strong>Análise e desenvolvimento de sistemas</strong>, avançando
             ainda mais meus conhecimentos.
+          </p>
+          <p>
+            Todo esse tempo tenho me dedicado o máximo possível ao
+            desenvolvimento web, consegui bons resultados e passei por problemas
+            que consegui resolver e hoje entendo que esse é o meu lugar no
+            mercado. Oque conquistei até aqui envolveu além de conhecimentos
+            técnicos, falo de equilíbrio emocional, satisfação e disposição de
+            aprender coisas novas. Estou disposto sempre a evoluir como pessoa e
+            meus conhecimentos técnicos, isso me torna capaz de alcançar
+            resultados excelente.
           </p>
           <p>
             Se você procura um <strong>Programador</strong> dedicado e sempre
