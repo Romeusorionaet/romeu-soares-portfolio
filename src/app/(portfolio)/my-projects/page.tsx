@@ -9,7 +9,7 @@ import { LoadingLampReappearing } from '@/components/loadings/lamp-reappearing'
 import { filterProjectsByType } from './helpers/filter-projects-by-type'
 import { topicsProjects } from '@/constants/topics-projects'
 import { GetTranslateValue } from './helpers/get-translate-value'
-import { fetchProjects, ProjectsProps } from '@/actions/firebase'
+import { fetchProjects, type ProjectsProps } from '@/actions/firebase'
 import { MovingBackgroundBalls } from '@/components/moving-card/moving-background-balls'
 
 export default function MyProjects() {
@@ -60,10 +60,10 @@ export default function MyProjects() {
   }
 
   return (
-    <main className="overflow-hidden px-4 pb-28 pt-40">
-      <h1 className="style_title_1 text-center">Meus projetos web</h1>
+    <main className="overflow-hidden px-4 pb-28 pt-56">
+      <h1 className="style_title_1 text-center">Projetos web</h1>
 
-      <section className="section_limiter relative mt-28 rounded-full bg-white/90 px-4 text-dark-1">
+      <section className="relative mx-auto mt-28 w-full max-w-[400px] rounded-full bg-white/90 px-4 text-dark-1">
         {Array.from({ length: 10 }).map((_, index) => (
           <MovingBackgroundBalls key={index} />
         ))}
@@ -83,23 +83,29 @@ export default function MyProjects() {
         </div>
 
         <ul className="flex w-80 justify-center gap-10 rounded-md p-2 uppercase">
-          <li
-            onClick={() => handleTargetProject(topicsProjects.PERSONAL)}
-            className="cursor-pointer"
-          >
-            <button>Pessoais</button>
+          <li className="cursor-pointer">
+            <button
+              type="button"
+              onClick={() => handleTargetProject(topicsProjects.PERSONAL)}
+            >
+              Pessoais
+            </button>
           </li>
-          <li
-            onClick={() => handleTargetProject(topicsProjects.CLASS)}
-            className="cursor-pointer"
-          >
-            <button>Aula</button>
+          <li className="cursor-pointer">
+            <button
+              type="button"
+              onClick={() => handleTargetProject(topicsProjects.CLASS)}
+            >
+              Aula
+            </button>
           </li>
-          <li
-            onClick={() => handleTargetProject(topicsProjects.FREELANCE)}
-            className="cursor-pointer"
-          >
-            <button>Freelancer</button>
+          <li className="cursor-pointer">
+            <button
+              type="button"
+              onClick={() => handleTargetProject(topicsProjects.FREELANCE)}
+            >
+              Freelancer
+            </button>
           </li>
         </ul>
       </section>

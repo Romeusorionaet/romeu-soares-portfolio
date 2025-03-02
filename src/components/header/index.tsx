@@ -13,13 +13,11 @@ import github from '@/assets/img/header-img/github.png'
 import instagram from '@/assets/img/header-img/instagram.png'
 import linkedin from '@/assets/img/header-img/linkedin.png'
 import whatsApp from '@/assets/img/header-img/whatsApp.png'
-import Image, { StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import { useState } from 'react'
-import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
 import { socialMediaOptions } from '@/constants/social-media-options'
 import { socialLinks } from './social-link'
-import { routes } from '@/constants/route'
+import Link from 'next/link'
 
 export function Header() {
   const [stateEventMouseHover, setStateEventMouseHover] = useState(false)
@@ -56,47 +54,13 @@ export function Header() {
   }
 
   return (
-    <header className="fixed left-0 z-20 flex h-20 w-full items-center justify-between bg-background px-4 pb-4 pt-10">
-      <section className="section_limiter flex justify-between">
-        <nav>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex gap-2">
-              <span>Menu</span> <ChevronDown />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-cyan-50">
-              <DropdownMenuSeparator />
-              <Link href={`${routes.home}`} className="no-underline">
-                <DropdownMenuItem>Início</DropdownMenuItem>
-              </Link>
-              <Link href={`${routes.about}`} className="no-underline">
-                <DropdownMenuItem>Sobre</DropdownMenuItem>
-              </Link>
-              <Link href={`${routes.myProjects}`} className="no-underline">
-                <DropdownMenuItem>Projetos</DropdownMenuItem>
-              </Link>
-              <Link
-                href={`${routes.developer}/${routes.frontEnd}`}
-                className="no-underline"
-              >
-                <DropdownMenuItem>Front-end</DropdownMenuItem>
-              </Link>
-              <Link
-                href={`${routes.developer}/${routes.backEnd}`}
-                className="no-underline"
-              >
-                <DropdownMenuItem>Back-end</DropdownMenuItem>
-              </Link>
-              <Link href={`${routes.setup}`} className="no-underline">
-                <DropdownMenuItem>Setup</DropdownMenuItem>
-              </Link>
-              <Link href={`${routes.codev}`} className="no-underline">
-                <DropdownMenuItem>Codev (Blog)</DropdownMenuItem>
-              </Link>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </nav>
+    <header className="fixed left-0 z-20 flex h-20 w-full items-center justify-between bg-zinc-800/90 px-4 pb-4 pt-10">
+      <section className="section_limiter">
+        <nav className="flex justify-between font-light">
+          <Link href="/" className="no-underline hover:underline">
+            Início
+          </Link>
 
-        <nav>
           <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger>
@@ -143,7 +107,7 @@ export function Header() {
                   key={social.name}
                   aria-label={`Link to ${social.name}`}
                   href={social.href}
-                  className="no-underline"
+                  className="no-underline hover:underline"
                 >
                   {social.name}
                 </a>

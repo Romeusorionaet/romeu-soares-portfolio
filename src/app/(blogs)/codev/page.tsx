@@ -3,7 +3,10 @@
 import { Suspense, useContext } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
-import { GithubContext, GithubDataIssueProps } from '@/contexts/github-context'
+import {
+  GithubContext,
+  type GithubDataIssueProps,
+} from '@/contexts/github-context'
 import { ProfileGithub } from './components/profile-github'
 import { ControlButtonsPagination } from '@/components/control-buttons-pagination'
 import Link from 'next/link'

@@ -3,7 +3,7 @@
 import { GithubContextProvider } from '@/contexts/github-context'
 import { queryClient } from '@/lib/query-client'
 import { QueryClientProvider } from '@tanstack/react-query'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export default function ClientProviders({ children }: { children: ReactNode }) {
   return (

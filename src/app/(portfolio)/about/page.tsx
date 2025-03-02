@@ -5,7 +5,7 @@ import { TopicsNavigation } from '@/components/topics-navigation'
 
 export default function About() {
   return (
-    <main className="relative space-y-8 overflow-hidden px-4 pb-28 pt-40">
+    <main className="relative space-y-8 overflow-hidden px-4 pb-28 pt-56">
       {Array.from({ length: 10 }).map((_, index) => (
         <MovingBackgroundBalls key={index} />
       ))}

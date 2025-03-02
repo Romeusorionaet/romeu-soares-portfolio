@@ -3,10 +3,10 @@ import gears from '@/lib/gears.json'
 
 export default function Gear() {
   return (
-    <main className="pb-8 pt-28">
+    <main className="pb-8 pt-56">
       <h1 className="style_title_1 text-center">SetUp</h1>
 
-      <section className="section_limiter mt-28 flex flex-wrap items-center justify-center gap-4 px-4">
+      <section className="section_limiter mt-10 flex flex-wrap items-center justify-center px-4 md:gap-4">
         {gears.map((item) => {
           return (
             <CardGear

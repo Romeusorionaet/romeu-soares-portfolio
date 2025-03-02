@@ -8,7 +8,7 @@ import ClientProviders from '@/utils/client-providers'
 const prompt = Prompt({
   subsets: ['latin'],
   variable: '--font-prompt',
-  weight: '400',
+  weight: ['200', '400', '700'],
 })
 const slackey = Slackey({
   subsets: ['latin'],
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="br">
       <body className={`${prompt.variable} ${slackey.variable} antialiased`}>
         <ClientProviders>{children}</ClientProviders>
       </body>

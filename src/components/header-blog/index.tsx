@@ -24,7 +24,7 @@ export function HeaderBlog() {
 
       <section className="section_limiter flex gap-8 max-md:justify-center">
         <Link href={`${routes.home}`} className="no-underline hover:scale-105">
-          Portfólio
+          Início
         </Link>
 
         <nav>

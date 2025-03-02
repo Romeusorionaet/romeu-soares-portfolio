@@ -22,9 +22,9 @@ export function TopicsNavigation() {
       </nav>
 
       <a
-        href="/romeu-soares-programador-front-end.docx"
-        download="Curriculo.docx"
-        aria-label="Baixar Currículo em DOCX"
+        href="/romeu-soares-programador-front-end.pdf"
+        download="Curriculo.pdf"
+        aria-label="Baixar Currículo em PDF"
       >
         Baixar Currículo
       </a>

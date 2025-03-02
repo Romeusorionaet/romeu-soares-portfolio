@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import nodejs from '@/assets/img/stacks/back-end/nodejsLogo.svg'
+import nodejs from '@/assets/img/stacks/back-end/nodejsLogo.png'
 import Link from 'next/link'
 import { ArrowRight, Menu } from 'lucide-react'
 import { routes } from '@/constants/route'
@@ -26,12 +26,12 @@ export default function BackEnd() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden px-4 pb-28">
+    <main className="relative min-h-screen overflow-hidden px-4 pb-28 pt-56">
       {Array.from({ length: 10 }).map((_, index) => (
         <MovingBackgroundBalls key={index} />
       ))}
 
-      <h1 className="style_title_1 online-block mx-auto mt-40 w-5/6 text-center">
+      <h1 className="style_title_1 online-block mx-auto w-4/6 text-center">
         Meus conhecimentos como programador Back-End
       </h1>
 
@@ -52,6 +52,7 @@ export default function BackEnd() {
           <div className="flex flex-col gap-4 max-md:hidden">
             {Object.entries(topicsKnowledgeBackEnd).map(([key, value]) => (
               <button
+                type="button"
                 key={key}
                 data-value={topic === value}
                 onClick={() => handleShowTopic(value)}
@@ -72,6 +73,7 @@ export default function BackEnd() {
                 {Object.entries(topicsKnowledgeBackEnd).map(([key, value]) => (
                   <DropdownMenuItem key={key}>
                     <button
+                      type="button"
                       data-value={topic === value}
                       onClick={() => handleShowTopic(value)}
                       className="text-left font-bold data-[value=true]:text-green-500"

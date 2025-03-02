@@ -3,7 +3,7 @@
 import { nameRepoOfIssue } from '@/constants/name-repo-of-issue'
 import { apiGithub } from '@/lib/api-github'
 import { useQuery } from '@tanstack/react-query'
-import { ReactNode, createContext, useState } from 'react'
+import { type ReactNode, createContext, useState } from 'react'
 
 interface GithubDataProps {
   avatar_url: string
@@ -51,7 +51,7 @@ export function GithubContextProvider({
   } = useQuery({
     queryKey: ['profile-github'],
     queryFn: async () =>
-      apiGithub.get(`/users/Romeusorionaet`).then((response) => response.data),
+      apiGithub.get('/users/Romeusorionaet').then((response) => response.data),
     staleTime: 86400000, // 24 hours,
   })
 
@@ -61,7 +61,7 @@ export function GithubContextProvider({
     error: errGithubDataIssues,
     refetch,
   } = useQuery({
-    queryKey: [`issues-github`, search],
+    queryKey: ['issues-github', search],
     queryFn: () =>
       apiGithub
         .get(
