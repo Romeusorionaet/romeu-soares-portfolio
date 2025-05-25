@@ -2,10 +2,10 @@ import { CardsStacks } from '@/components/cards-stacks'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden pt-56">
+    <main className="overflow-hidden pb-10 pt-56">
       <div className="fixed -bottom-10 -right-20 h-56 w-[500px] rounded-full bg-violet-200 opacity-50 blur-3xl" />
       <div className="fixed -right-20 bottom-10 h-[500px] w-96 rounded-full bg-cyan-500 opacity-40 blur-3xl" />
-      <div className="fixed bottom-4 right-4 z-20 h-56 w-56 bg-[url(/backgrounds/programming.png)] bg-cover bg-no-repeat max-md:hidden" />
+      <div className="fixed bottom-4 right-4 -z-10 h-56 w-56 bg-[url(/backgrounds/programming.png)] bg-cover bg-no-repeat max-md:hidden" />
       <section className="section_limiter flex flex-col gap-10 px-4">
         <div className="mx-auto space-y-4 rounded-md p-2 duration-500 md:w-1/2">
           <h1 className="style_title_1 whitespace-nowrap mix-blend-exclusion">
@@ -17,6 +17,13 @@ export default function Home() {
             bem-vinda! Preparei esta página para compartilhar todos os meus
             conhecimentos em Programação Web, apresentarei tudo de maneira
             descontraída e agradável. Aproveite para explorar!
+          </p>
+
+          <p className="mix-blend-exclusion max-md:text-sm">
+            Atualmente, estou disponível para oportunidades de trabalho no
+            modelo CLT e também para projetos como freelancer. Se você ou sua
+            empresa está em busca de um desenvolvedor comprometido e apaixonado
+            por tecnologia, entre em contato — será um prazer colaborar!
           </p>
         </div>
 
