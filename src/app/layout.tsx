@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="br">
-      <body className={`${prompt.variable} ${slackey.variable} antialiased`}>
+      <body
+        className={`${prompt.variable} ${slackey.variable} mx-auto antialiased`}
+      >
         <ClientProviders>{children}</ClientProviders>
       </body>
     </html>

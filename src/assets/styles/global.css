@@ -34,12 +34,12 @@
 
   @layer base {
     * {
-      @apply border-border;
+      @apply box-border;
     }
     body {
-      @apply bg-background text-foreground font-prompt;
+      @apply bg-background text-foreground font-prompt max-w-[1680px] mx-auto;
     }
-    h1 {
+    h1, h2 {
       @apply font-slackey
     }
     p {
@@ -83,5 +83,8 @@
     }
     #sectionContentList > ul {
       @apply flex flex-col gap-4 data-[value=false]:hidden
+    }
+    .style-list-description-project li {
+      @apply text-sm text-start flex items-start gap-2
     }
   } 

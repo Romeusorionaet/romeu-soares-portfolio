@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 interface ProjectsProps {
@@ -9,7 +8,6 @@ interface ProjectsProps {
   previewMobile: string
   pageURL: string
   title: string
-  description: string
 }
 
 export function CardProject({
@@ -17,28 +15,20 @@ export function CardProject({
   previewMobile,
   pageURL,
   title,
-  description,
 }: ProjectsProps) {
-  const [showDescription, setShowDescription] = useState(false)
-
-  const handleShowDescription = () => {
-    if (showDescription === true) {
-      setShowDescription(false)
-    } else {
-      setShowDescription(true)
-    }
-  }
-
-  const contentBtn = showDescription ? 'Fechar' : 'Descrição'
-
   return (
-    <article className="h-[30rem] w-[20rem] rounded-md">
-      <div className="relative h-[26rem] w-full overflow-hidden">
-        <a href={pageURL} target="_blank" rel="noreferrer">
-          <h2 className="mb-4 text-center font-bold hover:scale-105">
+    <article className="w-[20rem] rounded-md">
+      <div className="relative w-full overflow-hidden">
+        <h2 className="mb-4 text-center font-bold hover:scale-105">
+          <a
+            href={pageURL}
+            target="_blank"
+            rel="noreferrer"
+            className="underline"
+          >
             {title}
-          </h2>
-        </a>
+          </a>
+        </h2>
 
         <div className="relative">
           <Image
@@ -84,25 +74,7 @@ export function CardProject({
             )}
           </div>
         </div>
-
-        <div
-          data-value={showDescription}
-          className="absolute top-0 hidden h-full data-[value=true]:flex"
-        >
-          <div className="flex h-full items-center">
-            <p className="bg-background p-2 text-justify">{description}</p>
-          </div>
-        </div>
       </div>
-
-      {description && (
-        <button
-          onClick={handleShowDescription}
-          className="z-10 w-24 rounded-md bg-dark-1/50 p-1 hover:scale-105 hover:border focus:border"
-        >
-          {contentBtn}
-        </button>
-      )}
     </article>
   )
 }
