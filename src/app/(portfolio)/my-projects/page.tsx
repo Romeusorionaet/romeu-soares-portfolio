@@ -123,7 +123,6 @@ export default function MyProjects() {
                 previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
-                description={item.description}
               />
             )
           })}
@@ -141,7 +140,6 @@ export default function MyProjects() {
                 previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
-                description={item.description}
               />
             )
           })}
@@ -159,7 +157,6 @@ export default function MyProjects() {
                 previewMobile={item.previewMobile}
                 pageURL={item.pageURL}
                 title={item.title}
-                description={item.description}
               />
             )
           })}
