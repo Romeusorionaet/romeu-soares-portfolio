@@ -27,6 +27,7 @@
 		"react-syntax-highlighter": "^15.5.0",
 		"react-tilt": "^1.0.2",
 		"sharp": "^0.33.4",
+		"swiper": "^11.2.10",
 		"tailwind-merge": "^2.4.0",
 		"tailwindcss-animate": "^1.0.7",
 		"uvcanvas": "^0.2.2",
