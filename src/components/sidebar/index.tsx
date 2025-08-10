@@ -18,14 +18,6 @@ export function Sidebar() {
           </li>
           <li>
             <Link
-              href={`${routes.myProjects}`}
-              className="no-underline hover:underline"
-            >
-              Projetos
-            </Link>
-          </li>
-          <li>
-            <Link
               href={`${routes.developer}/${routes.frontEnd}`}
               className="no-underline hover:underline"
             >

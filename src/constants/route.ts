@@ -5,7 +5,6 @@ export const routes = {
   frontEnd: '/front-end',
   backEnd: '/back-end',
   about: '/about',
-  myProjects: '/my-projects',
   setup: '/gear',
   detailsIssueGithub: '/details-issue-github',
 }

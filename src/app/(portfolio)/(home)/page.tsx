@@ -1,7 +1,8 @@
+import { CarouselPreviewsProjects } from '@/components/carousel-previews-project'
 import { CardsStacks } from '@/components/cards-stacks'
-import { ArrowDown } from 'lucide-react'
-import { CardProject } from '../my-projects/components/card-project'
+import { CardProject } from '@/components/card-project'
 import { Ribbon } from '@/components/ribbon'
+import { ArrowDown } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -628,6 +629,16 @@ export default function Home() {
               </ul>
             </div>
           </section>
+        </div>
+      </section>
+
+      <section className="px-4 pt-20">
+        <h2 className="style_title_1 whitespace-nowrap mix-blend-exclusion">
+          Outros projetos
+        </h2>
+
+        <div className="my-20">
+          <CarouselPreviewsProjects />
         </div>
       </section>
     </main>
