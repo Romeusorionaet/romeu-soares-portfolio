@@ -141,7 +141,10 @@ export default function BackEnd() {
           <ul data-value={topic === topicsKnowledgeBackEnd.DOCKER}>
             <li>
               Docker: Containerização de aplicações para ambiente de
-              desenvolvimento.
+              desenvolvimento e básico de dockerização.
+            </li>
+             <li>
+              Projeto dockerizado <a href="https://github.com/Romeusorionaet/Mini-Marketplace" target="_blank">Mini Marketplace</a>
             </li>
           </ul>
 

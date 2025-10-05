@@ -25,7 +25,7 @@ export default function About() {
 
         <div className="mx-auto space-y-4 lg:w-1/2">
           <p>
-            Meu nome é <strong>Romeu Soares</strong>, tenho 26 anos e sou
+            Meu nome é <strong>Romeu Soares</strong>, tenho 27 anos e sou
             <strong> Programador Web</strong>. Estou sempre em busca de novas
             oportunidades para aprender e crescer nesta área.
           </p>
@@ -67,7 +67,7 @@ export default function About() {
             Todo esse tempo tenho me dedicado o máximo possível ao
             desenvolvimento web, consegui bons resultados e passei por problemas
             que consegui resolver e hoje entendo que esse é o meu lugar no
-            mercado. Oque conquistei até aqui envolveu além de conhecimentos
+            mercado. O que conquistei até aqui envolveu além de conhecimentos
             técnicos, falo de equilíbrio emocional, satisfação e disposição de
             aprender coisas novas. Estou disposto sempre a evoluir como pessoa e
             meus conhecimentos técnicos, isso me torna capaz de alcançar
@@ -89,6 +89,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/84022f25-54c7-4c79-aff3-6326b6978d29"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Certificado do programa Explorer/FullStack
           </a>
@@ -97,6 +98,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/01c2d0aa-f1a9-48a9-b8d8-69b8f9dc0ecf"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Certificado do programa Ignite módulo Reactjs/Frontend
           </a>
@@ -105,6 +107,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/a4121039-15c1-43e3-b352-b4336b3616da"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Certificado do programa Ignite módulo Nodejs/Backend
           </a>
@@ -113,6 +116,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/e51fbba1-7aa7-4c15-b9ce-2da3d76f0e15"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado - Fundamentos do React
           </a>
@@ -121,6 +125,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/b31bc9f0-c44a-4305-92bd-4dff6db9263c"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado - HTTP Performance
           </a>
@@ -129,6 +134,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/b4d48bf5-6cdf-4e78-b806-aaf0cee3b83b"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado - Fundamentos de Nodejs
           </a>
@@ -137,6 +143,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/700d8c77-52ea-4171-8f51-4a94b4d677ff"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado - DDD Clean Architecture
           </a>
@@ -145,6 +152,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/a45fffeb-34f3-4b67-9a05-0010b8a1046d"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado curso - Next.js App Router e Testes
           </a>
@@ -153,6 +161,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/f6b62499-2e30-45dd-a521-27a07141b54e"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado curso - Redux + Zustand
           </a>
@@ -161,6 +170,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/fa660f97-98ca-4eed-87c1-dd5610e5f514"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado curso - Masterizando o Tailwind
           </a>
@@ -169,6 +179,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/1148748a-5624-419b-bb6b-64cbd319efcf"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado evento - NLW Unite - Reactjs
           </a>
@@ -177,6 +188,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/234fcb56-b098-4025-bb0e-bd8da9ec47cf"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado evento - AI for Devs
           </a>
@@ -185,6 +197,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/801c048b-69bc-4afa-916c-ee0a9e344617"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado evento - NLW IA
           </a>
@@ -193,6 +206,7 @@ export default function About() {
             href="https://app.rocketseat.com.br/certificates/baf813ef-3d39-4b18-a678-d8fb4de54472"
             target="_blank"
             rel="noreferrer"
+            className='hover:underline'
           >
             Micro Certificado evento - NLW Expert trilha de React
           </a>
