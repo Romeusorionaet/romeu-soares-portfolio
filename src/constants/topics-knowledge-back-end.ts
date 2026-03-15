@@ -7,4 +7,7 @@ export const topicsKnowledgeBackEnd = {
   DATABASE_ORM: 'Banco de dados e ORM',
   DEPLOY_BUILD: 'Deploy e Build',
   VERSION_CONTROL: 'Controle de versionamento',
+  WEBHOOKS_INTEGRATIONS: 'Webhooks e Integrações',
+  SEARCH_ENGINES: 'Motores de Busca',
+  MULTI_TENANT: 'Arquitetura Multi-Tenant',
 }

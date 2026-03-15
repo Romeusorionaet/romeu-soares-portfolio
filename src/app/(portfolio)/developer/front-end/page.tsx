@@ -460,6 +460,98 @@ export default function FrontEnd() {
               </a>
             </li>
           </ul>
+
+          <ul data-value={topic === topicsKnowledgeFrontEnd.SVELTE_SVELTEKIT}>
+            <li>
+              <strong>Svelte 5:</strong> Framework reativo moderno com foco em
+              performance e simplicidade, utilizando runes para gerenciamento de
+              estado reativo.
+            </li>
+            <li>
+              <strong>SvelteKit:</strong> Framework full-stack baseado em Svelte,
+              com suporte a SSR (Server-Side Rendering), roteamento baseado em
+              arquivos e APIs integradas.
+            </li>
+            <li>
+              <strong>Svelte Runes:</strong> Sistema de runes ($state, $derived,
+              $effect) para gerenciamento reativo de estado, substituindo o
+              sistema de reatividade anterior.
+            </li>
+            <li>
+              <strong>Server Load Functions:</strong> Experiência com funções de
+              carregamento no servidor (+page.server.ts, +layout.server.ts) para
+              buscar dados e realizar operações server-side.
+            </li>
+            <li>
+              <strong>Form Actions:</strong> Implementação de ações de formulário
+              server-side para processamento seguro de dados.
+            </li>
+            <li>
+              <strong>Hooks Server:</strong> Trabalho com hooks.server.ts para
+              interceptação de requisições, identificação de marketplace
+              multi-tenant e injeção de contexto.
+            </li>
+            <li>
+              <strong>Componentes Svelte:</strong> Desenvolvimento de componentes
+              reutilizáveis com props tipadas, slots e eventos customizados.
+            </li>
+          </ul>
+
+          <ul data-value={topic === topicsKnowledgeFrontEnd.TESTING}>
+            <li>
+              <strong>Playwright:</strong> Experiência profissional com testes
+              end-to-end (E2E) em aplicações SvelteKit e Next.js, cobrindo
+              fluxos críticos como checkout, autenticação e navegação.
+            </li>
+            <li>
+              <strong>Testes E2E:</strong> Criação e manutenção de testes
+              automatizados com ambiente isolado, garantindo confiabilidade das
+              entregas em produção.
+            </li>
+            <li>
+              <strong>Vitest:</strong> Framework de testes unitários para
+              componentes e funções, com suporte a TypeScript e cobertura de
+              código.
+            </li>
+            <li>
+              <strong>MSW (Mock Service Worker):</strong> Uso de MSW para mockar
+              requisições HTTP em testes, permitindo testes isolados e
+              determinísticos.
+            </li>
+            <li>
+              <strong>Testes de Integração:</strong> Experiência em testar
+              integrações entre frontend e backend, validando fluxos completos
+              de dados.
+            </li>
+          </ul>
+
+          <ul data-value={topic === topicsKnowledgeFrontEnd.MULTI_TENANT}>
+            <li>
+              <strong>Arquitetura Multi-Tenant:</strong> Experiência profissional
+              trabalhando em plataforma de e-commerce multi-tenant, onde cada
+              marketplace possui seu próprio domínio e configurações.
+            </li>
+            <li>
+              <strong>Identificação por Domínio:</strong> Implementação de
+              lógica para identificar marketplace através do hostname, injetando
+              contexto em todas as requisições.
+            </li>
+            <li>
+              <strong>Isolamento de Dados:</strong> Garantia de isolamento de
+              dados entre diferentes tenants, sempre filtrando queries por
+              marketplace_id.
+            </li>
+            <li>
+              <strong>Configurações Dinâmicas:</strong> Trabalho com
+              configurações específicas por tenant, como temas, logos e
+              funcionalidades customizadas.
+            </li>
+            <li>
+              <strong>Performance Multi-Tenant:</strong> Otimização de queries e
+              cache considerando o contexto multi-tenant, garantindo performance
+              mesmo com múltiplos marketplaces.
+            </li>
+          </ul>
         </section>
       </section>
 

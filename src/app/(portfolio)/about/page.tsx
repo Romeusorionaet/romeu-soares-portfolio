@@ -63,6 +63,80 @@ export default function About() {
             <strong>Análise e desenvolvimento de sistemas</strong>, avançando
             ainda mais meus conhecimentos.
           </p>
+        </div>
+      </section>
+
+      <section className="section_limiter space-y-8">
+        <h2 className="text-lg md:text-xl">Experiência Profissional</h2>
+
+        <div className="mx-auto space-y-4 lg:w-1/2">
+          <div className="rounded-lg border border-gray-200 bg-white/60 p-6 shadow-md">
+            <h3 className="mb-2 text-xl font-bold">
+              Desenvolvedor Web Full Stack | Super1
+            </h3>
+            <p className="mb-4 text-sm text-gray-600">
+              Outubro 2025 a Março 2026 (6 meses)
+            </p>
+            <p className="mb-4">
+              Atuei como <strong>Desenvolvedor Web Full Stack</strong> em uma
+              plataforma de e-commerce <strong>multi-tenant</strong>, onde trabalhei
+              com manutenção evolutiva, correção de bugs, integrações com serviços
+              externos e melhoria de fluxos críticos de produto.
+            </p>
+            <p className="mb-4">
+              <strong>Principais responsabilidades:</strong>
+            </p>
+            <ul className="mb-4 ml-6 list-disc space-y-2 text-sm">
+              <li>
+                Correção de bugs e evolução de funcionalidades em catálogo,
+                checkout, publicação de produtos e painéis administrativos
+              </li>
+              <li>
+                Integrações com marketplaces (Tray, Loja Integrada, Nuvemshop) e
+                serviços externos (antifraude B2e, Frenet), incluindo webhooks e
+                callbacks assíncronos
+              </li>
+              <li>
+                Trabalhei com <strong>OpenSearch</strong> para indexação e busca,
+                garantindo consistência entre listagens e detalhes de produtos
+              </li>
+              <li>
+                Criação e manutenção de testes automatizados E2E com ambiente
+                isolado, cobrindo checkout, autenticação e fluxos críticos
+              </li>
+              <li>
+                Debugging em produção usando logs, identificação de gargalos e
+                resolução de problemas de sincronização e reatividade
+              </li>
+            </ul>
+            <p className="mb-2">
+              <strong>Stack tecnológica:</strong>
+            </p>
+            <p className="text-sm">
+              <strong>Frontend:</strong> React.js, Next.js, Svelte, SvelteKit,
+              TailwindCSS, Styled-components, TypeScript
+            </p>
+            <p className="text-sm">
+              <strong>Backend:</strong> Node.js, Express, Fastify, ElysiaJS, APIs
+              RESTful, webhooks, autenticação JWT
+            </p>
+            <p className="text-sm">
+              <strong>Banco de dados:</strong> PostgreSQL, MySQL, Drizzle ORM,
+              Prisma, OpenSearch
+            </p>
+            <p className="text-sm">
+              <strong>Testes:</strong> Unitários e E2E (Playwright, Vitest)
+            </p>
+            <p className="text-sm">
+              <strong>DevOps:</strong> Docker, análise de logs, debugging em
+              produção
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section_limiter space-y-8">
+        <div className="mx-auto space-y-4 lg:w-1/2">
           <p>
             Todo esse tempo tenho me dedicado o máximo possível ao
             desenvolvimento web, consegui bons resultados e passei por problemas

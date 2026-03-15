@@ -12,4 +12,7 @@ export const topicsKnowledgeFrontEnd = {
   TOOLS_ECOSYSTEM: 'Ferramentas e Ecossistema',
   FRONT_BACK: 'Front-end / Back-end',
   JAVASCRIPT_TYPESCRIPT: 'Javascript / Typescript',
+  SVELTE_SVELTEKIT: 'Svelte e SvelteKit',
+  TESTING: 'Testes Frontend',
+  MULTI_TENANT: 'Arquitetura Multi-Tenant',
 }
